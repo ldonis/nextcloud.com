@@ -1,327 +1,411 @@
-<?php get_template_part('templates/parts/title'); ?>
-<div class="sub-nav">
-	<a href="/events/meetups">Meetups</a>&nbsp;&nbsp;
-	|&nbsp;&nbsp;<a href="/events/conference-program">Conference Program</a>
-	|&nbsp;&nbsp;<a href="/events/contactform">Contact</a>
-</div>
-<div class="row">
-	<div class="col-md-12">
-		<p>The Nextcloud community organizes and participates in many events around the globe. Interested in meeting fellow Nextcloud users and contributors? Look for an 
-			event that happens close to you or organize one!</p>
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/events/meetup_small.jpg" style="width: 400px" title="" alt="" class="img-thumbnail alignright">
-		<h2>Meetups</h2>
-		<p>Nextcloud community members all around the globe get together in meetups to learn, share ideas and work on 
-			Nextcloud. Meetups are informal meetings which are typically held in the evening and can be focused on development, user or business topics. You can take part as a speaker, participant or promoter. Meetups are typically held once a month and are open to anyone. Below is a list of local meetup groups.</p>
-		<script type="text/javascript" src="https://www.meetup.com/embed/largest/nextcloud/"></script>
-		<p>Find the next Meetup dates and more on <a target="_blank" href="https://nextcloud.meetup.com/">nextcloud.meetup.com</a></p>
-		<div class="row" style="text-align: center">
-			<p><a target="_blank" href="https://nextcloud.meetup.com/" class="btn btn-lg btn-default">
-			<i class="icon-group"></i> Join a Meetup!</a>
-			<a target="_blank" href="/events/meetups" class="btn btn-lg btn-default">
-			<i class="icon-lightbulb-o"></i> Organize a Meetup!</a></p>
-<!-- 			<p><a target="_blank" href="/conf/" class="btn btn-lg btn-primary"> -->
-<!-- 			<i class="icon-code"></i> Nextcloud Contributor Conference!</a></p> -->
-		</div>
-<!--<div class="wrap container pad-bottom">
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h2>The Nextcloud Contributor Conference!</h2>
-		</div>
-	</div>-->
-<!--	<div class="row pad-bottom">
-		<div class="text-center videoWrapper">
-			<iframe width="560" height="315" src="https://www.youtube.com/embed/DvW_EoIoD1Y" frameborder="0" allowfullscreen></iframe>
-		</div>
-	</div>-->
-<!--	<div class="row pad-bottom">
-		<div class="col-md-12 text-center">
-			  <a class="btn btn-block btn-lg join-button events-button" href="/conf" role="button">Learn more about the conference!</a>
+<head>
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/assets/css/pages/events.css?v=1">
+<script>
+require(["require.config"], function() {
+	require(["bootstrap"])
+});
+</script>
+<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/events-small.jpg">
+<meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/events-small.jpg">
+<meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/events-small.jpg">
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/events-small.jpg">
+</head>
+<div class="background events-background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 topheader">
+				<h1><?php echo $l->t('Nextcloud Events across the world');?></h1>
+				<h2><?php echo $l->t('Nextcloud is represented at conferences and organizes its own meetups and events all across the globe. And you can participate!');?></h2>
+			</div>
 		</div>
 	</div>
-</div>-->
-		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/events/product_demo.jpg" style="width: 400px" title="Picture by Dragotin from CLT14" alt="Picture by Dragotin from CLT14" class="img-thumbnail alignright">
-		<h2>Conferences</h2>
-		<p>Nextcloud community members everywhere organize Nextcloud presence at trade shows and conferences to present our community and technology to visitors.
-			Below is a list of upcoming tradeshows and conferences where you can find Nextcloud represented!</p>
-			<p>If you have business questions and would like to meet Nextcloud, Inc. at an event, check out the <a href="https://nextcloud.com/events/event/">events page on nextcloud.com</a>.
-		<table class="table table-striped">
-			<tr>
-				<th>Event</th>
-				<th>Location</th>
-				<th>Date</th>
-				<th>Organizer/contact</th>
-				<th>Link</th>
-			</tr>
-			<tr>
-				<td>Nextcloud Contributor Conference 2016</td>
-				<td>Berlin, Germany</td>
-				<td>September 9-15</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com">Jos</a></td>
-				<td><a target="_blank" href="/conf">website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud Hackathon at openSUSE Conference 2016</td>
-				<td>Nuremberg, Germany</td>
-				<td>June 22-23</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com">Jos</a></td>
-				<td><a target="_blank" href="https://events.opensuse.org/conference/oSC16">website</a>, <a href="/hackathon">our info page</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud Business User Event</td>
-				<td>Frankfurt, Germany</td>
-				<td>June 1st</td>
-				<td><a target="_blank" href="https://nextcloud.com">Nextcloud, Inc.</a></td>
-				<td><a target="_blank" href="https://nextcloud.org/blog/nextcloud-connects-business-users/">blog</a> and <a target="_blank" href="https://oc.nextcloud.com/Register_cfp_1Jun16_org.html">agenda</a></td>
-			</tr>
-			<tr>
-				<td>Talk at DevOps Pro conference 2016</td>
-				<td>Vilnius, Lithuania</td>
-				<td>May 26, 2016</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com">Jos</a></td>
-				<td><a target="_blank" href="http://devopspro.lt/">website</a></td>
-			</tr>
-			<tr>
-				<td>Talk at NLUUG voorjaarsconferentie 2016</td>
-				<td>Bunnink/Utrecht, Netherlands</td>
-				<td>May 26, 2016</td>
-				<td><a href="https://github.com/rullzer">Rullzer</a></td>
-				<td><a target="_blank" href="https://www.nluug.nl/activiteiten/events/vj16/index.html">website</a></td>
-			</tr>
-			<tr>
-				<td>Workshop at OpenTechSummit 2016 Berlin</td>
-				<td>Berlin, Germany</td>
-				<td>May 5, 2016</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com">Jos</a></td>
-				<td><a target="_blank" href="http://www.meetup.com/OpenXLab/events/230446672/">website</a></td>
-			</tr>
-			<tr>
-				<td>Talk at Vault conference</td>
-				<td>Rayleigh, NC, USA</td>
-				<td>April 20-21, 2016</td>
-				<td><a target="_blank" href="http://http://karlitschek.de/blog/">Frank</a></td>
-				<td><a target="_blank" href="http://events.linuxfoundation.org/events/vault">website</a></td>
-			</tr>
-
-			</tr>
-		</table>
-		<p>Is there a conference, trade show or other event close by and you want Nextcloud to be there? <a target="_blank" href="/events/conference-program">Help make it happen!</a> If you want to present Nextcloud to an audience, find <a target="_blank" href="https://github.com/nextcloud/promo/tree/master/Presentation%20materials">presentation slides here</a> and checkout our page with <a href="/events/conference-program/speaking">tips and ideas about giving a talk</a>.</p>
-		<p>Are you presenting about Nextcloud or running a booth at an upcoming event that should be listed here? <a href="/events/contactform">Let us know via the contact form</a> or email the events mailing list!</p>
-		<p>Consider joining the <a target="_blank" href="https://mailman.nextcloud.org/mailman/listinfo/events">events mailing list</a> to discuss events with other Nextclouders.</p>
-
-		<h3>Events we've been at in 2016</h3>
-		<table class="table table-striped">
-			<tr>
-				<th>Event</th>
-				<th>Location</th>
-				<th>Date</th>
-				<th>Link (report)</th>
-			</tr>
-			<tr>
-				<td>PGConf US 2016</td>
-				<td>New York, USA</td>
-				<td>April 18-20, 2016</td>
-				<td><a target="_blank" href="http://www.pgconf.us/2016/">website</a></td>
-			</tr>
-			<tr>
-				<td>FOSSCOMM 2016</td>
-				<td>Pireaus (Athens), Greece</td>
-				<td>April 15-18, 2016</td>
-				<td><a target="_blank" href="http://fosscomm.cs.unipi.gr/">website</a> and <a target="_blank" href="http://eiosifidis.blogspot.gr/2016/04/opensuse-and-nextcloud-at-fosscomm-2016.html">blog</a></td>
-			</tr>
-			<tr>
-				<td>Özgür Yazılım ve Linux Günleri (Free Software And Linux Days)</td>
-				<td>Istanbul Bilgi University, Turkey</td>
-				<td>March 26-26, 2016</td>
-				<td><a target="_blank" href="http://ozguryazilimgunleri.org.tr/2016/">website</a>, <a href="http://ozguryazilimgunleri.org.tr/2016/etkinlik-programi/">program</a></td>
-			</tr>
-			<tr>
-				<td>Chemnitzer Linux Tage 2016</td>
-				<td>Chemnitz, Germany</td>
-				<td>March 18-20, 2016</td>
-				<td><a target="_blank" href="http://chemnitzer.linux-tage.de/">website</a></td>
-			</tr>
-			<tr>
-				<td>Workshop introduction to Nextcloud</th>
-				<td>College of Engineering, Pune (COEP)</th>
-				<td>February 6</th>
-				<td><a href="http://meetu.ps/2VgNf8">Site</a></th>
-			</tr>
-			<tr>
-				<td>Workshop on setting up your nextcloud</th>
-				<td>mini Debian Conference in Mumbai</th>
-				<td>January 31st</th>
-				<td><a href="http://in2016.mini.debconf.org/#schedule">Schedule</a></th>
-			</tr>
-			<tr>
-				<td>FOSDEM 2016</td>
-				<td>Brussels, Belgium</td>
-				<td>Jan 30-31, 2016</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com/2016/02/fosdem-2016-and-nextcloud-kolab-kde-and.html">blog by Jos</a></td>
-			</tr>
-			<tr>
-				<td>SCALE 2016</td>
-				<td>Pasedena, Los Angelos, CA, USA</td>
-				<td>Jan 21-24, 2016</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com/2016/01/scale14x-and-8-million-users-for.html">blog by Jos</a></td>
-			</tr>
-		</table>
-		
-		<h3>Events we've been at in 2015</h3>
-		<table class="table table-striped">
-			<tr>
-				<th>Event</th>
-				<th>Location</th>
-				<th>Date</th>
-				<th>Link (report)</th>
-			</tr>
-			<tr>
-				<td>FOSSCOMM 2015</td>
-				<td>Athens, Greece</td>
-				<td>Nov 6-8, 2015</td>
-				<td><a target="_blank" href="http://fosscomm.teiath.gr/">website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud Contributor Conference</td>
-				<td>Berlin, Germany</td>
-				<td>August 28-Sept 3 2015</td>
-				<td><a target="_blank" href="/conf/">Nextcloud Contributor Conference site</a>, <a target="_blank" href="https://nextcloud.org/blog/nextcloud-contributor-conference-well-underway">blog post</a></td>
-			</tr>
-			<tr>
-				<td>Talk at South East Linux Fest</td>
-				<td>Charlotte, NC, USA</td>
-				<td>June 12-14 2015</td>
-				<td><a target="_blank" href="http://www.southeastlinuxfest.org/">SELF website</a></td>
-			</tr>
-			<tr>
-				<td>Keynote at DORSLUC</td>
-				<td>Zagreb, Croatia</td>
-				<td>May 18-20 2015</td>
-				<td><a target="_blank" href="http://2015.dorscluc.org/en/">DORSLUC website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud workshop at OpenTechSummit</td>
-				<td>Berlin, Germany</td>
-				<td>May 14 2015</td>
-				<td><a target="_blank" href="http://opentechsummit.net/">Open Tech Summit site</a>, <a target="_blank" href="http://opentechsummit.net/#schedule">Schedule</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud workshop at TechMinistry</td>
-				<td>Thessaloniki, Greece</td>
-				<td>May 10 2015</td>
-				<td><a target="_blank" href="http://wiki.techministry.gr/index.php/OwnCloud_Workshop">wiki</a>, <a target="_blank" href="hhttps://plus.google.com/events/c78ap075bb4falrnmg3v0knmtao">G+</a> and <a target="_blank" href="https://www.facebook.com/events/1462326250725901/">Facebook</a></td>
-			</tr>
-			<tr>
-				<td>Linuxwochen 2015 Wien</td>
-				<td>Viena, Austria</td>
-				<td>May 7-9 2015</td>
-				<td><a target="_blank" href="http://www.linuxwochen.at/Wien/">website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud workshop at Happy Hacking Day 2015</td>
-				<td>Helsinki, Finland</td>
-				<td>May 7-9 2015</td>
-				<td><a target="_blank" href="http://happyhackingday.org/">Happy Hacking Day website</a> (<a target="_blank" href="http://blog.jospoortvliet.com/2015/05/nextcloud-workshops-two-down-two-to-go.html">report blog</a>)</td>
-			</tr>
-			<tr>
-				<td>Nextcloud talk at "Monades Aristias"</td>
-				<td>Aristotele University of Thessaloniki, Greece</td>
-				<td>May 6 2015, 19:00</td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Nextcloud workshop openSUSE Conference</td>
-				<td>Den Hague, Netherlands</td>
-				<td>May 1-4 2015</td>
-				<td><a target="_blank" href="https://conference.opensuse.org/">oSC website</a>, <a target="_blank" href="https://events.opensuse.org/conference/osc15/proposal/510">the workshop</a>, <a target="_blank" href="http://blog.jospoortvliet.com/2015/05/open-tech-summit-berlin-opensuse.html">report blog</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud talk, booth at FLISOL 2015, Paraguay</td>
-				<td>UPE University City Pdtes. Franco, Alto Paraná - Paraguay</td>
-				<td>April 25 2015</td>
-				<td><a target="_blank" href="http://flisol.info/FLISOL2015/Paraguay/AltoParana">AltoParana website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud talk at LinuxFest Northwest</td>
-				<td>Bellingham, WA, USA</td>
-				<td>April 25-26 2015</td>
-				<td><a target="_blank" href="http://linuxfestnorthwest.org/2015">LinuxFest Northwest website</a></td>
-			</tr>
-			<tr>
-				<td>Cloud and Nextcloud presentation at GreekLUG</td>
-				<td>Thessaloniki, Greece</td>
-				<td>April 5th</td>
-				<td> <a href="https://plus.google.com/events/clde2a4kdlbfedngqlof4feds5o">Google+ event page</a> or <a href="https://www.facebook.com/events/601862629958000/">Facebook event page</a>, <a target="_blank" href="http://www.greeklug.gr/">GreekLUG site</a>, <a target="_blank" href="http://eiosifidis.blogspot.com/2015/04/how-to-choose-cloud-why-nextcloud.html">blog about the event</a></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>Nextcloud talk and Booth at Chemnitzer Linux Tage</td>
-				<td>Chemnitz, Germany</td>
-				<td>March 21-22 2015</td>
-				<td><a target="_blank" href="https://chemnitzer.linux-tage.de/">CLT website</a></td>
-			</tr>
-			<tr>
-				<td>Nextcloud talk at LiberPlanet</td>
-				<td>MIT, Cambridge, USA</td>
-				<td>March 21-22 12015</td>
-				<td><a target="_blank" href="https://libreplanet.org/2015/">LibrePlanet website</a></td>
-			</tr>
-			<tr>
-				<td>University of the Aegean Nextcloud workshop</td>
-				<td>Néon Karlóvasi, Samos, Greece</td>
-				<td>March 14, 2015</td>
-				<td><a target="_blank" href="https://www.facebook.com/events/295437027246832/">Facebook info page</a></td>
-			</tr>
-			<tr>
-				<td>SCALE 13x</td>
-				<td>Los Angelos, CA, USA</td>
-				<td>February 19-22 2015</td>
-				<td><a target="_blank" href="http://www.socallinuxexpo.org/scale13x/">SCALE website</a> (<a target="_blank" href="https://nextcloud.org/blog/nextcloud-at-fosdem-2015-and-scale13x/">report</a>)</td>
-			</tr>
-			<tr>
-				<td>GNUify.in</td>
-				<td>Pune, India</td>
-				<td>14 February 2015</td>
-				<td>Nextcloud session: <a target="_blank" href="http://gnunify.in/event/79/51">Creating your own cloud server using Owncloud</a></td>
-			</tr>
-			<tr>
-				<td>FOSDEM 2015</td>
-				<td>Brussels, Belgium</td>
-				<td>January 31 and February 1</td>
-				<td><a target="_blank" href="https://fosdem.org/2015/">FOSDEM 2014</a> (<a target="_blank" href="https://nextcloud.org/blog/nextcloud-at-fosdem-2015-and-scale13x/">report</a>)</td>
-			</tr>
-		</table>
-
-<!--		<h2>Release parties</h2>
-		<p>One of the best parts of an Nextcloud release, are the community release parties! A release party can be a meeting in a cafe or office with a
-		presentation of what is new in the latest Nextcloud release and time to chat about it.
-		Release parties don't have to be done in the release week at all – doing it a bit later
-		gives everybody a chance to play with the release before the meeting.</p>
-		<table class="table table-striped">
-			<tr>
-				<th>City, Country</th>
-				<th>Location</th>
-				<th>Date and time</th>
-				<th>Organizer</th>
-				<th>Link</th>
-			</tr>
-			<tr>
-				<td>Berlin, Germany</td>
-				<td><a target="_blank" href="https://wikimedia.de/">Wikimedia office Berlin</a> at Tempelhofer Ufer 23/24</td>
-				<td>Friday, August 8 2014</td>
-				<td>Danimo, Blizz, jospoortvliet</td>
-				<td><a target="_blank" href="http://blog.jospoortvliet.com/2014/07/nextcloud-7-release-party-august-8-berlin.html">blogpost</a></td>
-			</tr>
-			<tr>
-				<td>Nuremberg, Germany</td>
-				<td><a target="_blank" href="http://www.coworking-nuernberg.de/">Coworkingspace</a> Nürnberg</td>
-				<td>Tuesday, August 5 2014</td>
-				<td>Tobias, Klaas, Holger</td>
-				<td><a target="_blank" href="https://dragotin.wordpress.com/2014/07/24/lets-party/">Blog</a> and <a target="_blank" href="https://www.facebook.com/events/769781489711151/">facebook</a></td>
-			</tr>
-			</tr>
-		</table>
-		<p> Want to organize an Nextcloud Release Party? See <a target="_blank" href="https://nextcloud.org/blog/plan-your-nextcloud-7-release-party"/>this blog post</a>
-		and this <a target="_blank" href="http://en.opensuse.org/openSUSE:Launch_party_HOWTO">how-to</a> for some tips and ideas
-		and <a href="/events/contactform">contact us</a> to get your party added to the list!!</p>-->
+</div>
+<div class="container">
+	<div class="sub-nav">
+		<a href="<?php echo home_url('events/meetups') ?>">Meetups</a>&nbsp;&nbsp;
+		|&nbsp;&nbsp;<a href="<?php echo home_url('events/conference-program') ?>">Events Program</a>
+	<!--     |&nbsp;&nbsp;<a href="<?php echo home_url('events/contactform') ?>">Contact</a> -->
 	</div>
 </div>
+
+<section class="events">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<p class="section--paragraph">Are you interested in meeting fellow Nextcloud users and contributors (<a class="hyperlink" href="<?php echo home_url('contributors') ?>">Nextclouders</a>, as we lovingly call ourselves)? You&#39;ve come to the right place! The Nextcloud community organizes and participates in many events around the globe and here you can find details on where you can meet us and how to organise your own event and become a member of the most active file sync and share open source community!</p>
+				<div class="alignright"><a href="<?php echo get_template_directory_uri(); ?>/assets/img/events/fosdem18.jpg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/events/fosdem18.jpg" style="width: 400px" title="" alt="" class="img-thumbnail"></a>
+				<p class="text-center">Our awesome team at FOSDEM 2018!</p></div>
+				<h2>Meetups</h2>
+				<p class="section--paragraph">Nextcloud community members get together in meetups to learn, share ideas and work on Nextcloud. Meetups are informal meetings which are typically held in the evening and can be focused on development, user or business topics. You can take part as a speaker, participant or promoter. Meetups are typically held once a month and are open to anyone. Below is a list of local meetup groups.</p>
+				<script type="text/javascript" src="https://www.meetup.com/embed/largest/nextcloud/"></script>
+				<p class="section--paragraph">Find the next Meetup dates and more on <a class="hyperlink" target="_blank" href="https://nextcloud.meetup.com/">nextcloud.meetup.com</a></p>
+				<div class="row" style="text-align: center">
+					<p class="section--paragraph"><a target="_blank" href="https://nextcloud.meetup.com/" class="btn btn-lg btn-default">
+					<i class="icon-group"></i> Join a Meetup!</a>
+					<a target="_blank"  href="<?php echo home_url('events/meetups') ?>" class="btn btn-lg btn-default">
+					<i class="icon-lightbulb-o"></i> Organize a Meetup!</a></p>
+				</div>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/conference/grouppic2019.jpg" style="width: 400px" title="" alt="" class="img-thumbnail alignright">
+				<h2>Nextcloud Conference</h2>
+				<p class="section--paragraph">The most exciting event on the yearly calendar for Nextcloud is of course our very own Nextcloud Conference! Over 300 Nextcloud community members get together for a full week. During week days, we write and discuss code while on the weekend we have an exciting, educational and inspirational program with keynotes, lightning talks and workshops around private, self-hosted cloud technologies.</p>
+				<p class="section--paragraph">You can read a report of our last conference <a class="hyperlink" href="https://nextcloud.com/blog/massive-series-of-announcements-over-weekend-from-nextcloud-conf-event-continues/">in this blog</a> and if you'd like to join in 2020 - mark these dates in your calendar:</p>
+				<h3>October 3-4 - online!</h3>
+				<a href="<?php echo home_url('conf') ?>" class="button button--blue button--large button--arrow">Learn more about the Nextcloud Conference</a>
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/img/events/booth.jpg" style="width: 400px" title="" alt="" class="img-thumbnail alignright">
+				<h2>Conferences, tradeshows and other events</h2>
+				<p class="section--paragraph">Nextcloud is participating in trade shows and conferences to present our community and technology to visitors.<br/>
+				Below is a list of tradeshows and conferences where Nextcloud is represented! If you have questions and would like to meet us at an event, check out this list and <a class="hyperlink" href="https://help.nextcloud.com/c/conference">let us know on the forums</a> you will be there.</p>
+            <a class="button button--blue" href="#2020" data-toggle="collapse">Events in 2020</a>
+                <div id="2020" class="collapse in">
+                <br>
+                <table class="table table-striped">
+					<tr>
+						<th>Event</th>
+						<th>Location</th>
+						<th>Date</th>
+					</tr>
+                     <tr>
+						<td><a class="hyperlink" target="_blank" href="https://fosdem.org/2020/">FOSDEM</a></td>
+						<td>Brussels, Belgium</td>
+						<td>February 1-2</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.univention-summit.de/">Univention Summit</a></td>
+						<td>Bremen, Germany</td>
+						<td>January 23-24</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://cs3.deic.dk/">CS3 cloud services workshop</a></td>
+						<td>Copenhagen, Denmark</td>
+						<td>January 27-29</td>
+					</tr>
+				</table>
+			</div>
+			<br/>
+            <p class="section--paragraph">Is there a conference, trade show or other event close by and you want Nextcloud to be there? Please <a class="hyperlink" href="https://help.nextcloud.com/c/conference">get in touch</a> and let us know, we will do our best to help making it happen!</p>
+            <p class="section--paragraph">Are you presenting about Nextcloud or running a booth at an upcoming event that should be listed here? Let us know <a class="hyperlink" href="https://help.nextcloud.com/c/conference">on the forums</a>!</p>
+                <a class="button button--blue" href="#2019" data-toggle="collapse">Events in 2019</a>
+                <div id="2019" class="collapse in">
+                <br>
+                <table class="table table-striped">
+					<tr>
+						<th>Event</th>
+						<th>Location</th>
+						<th>Date</th>
+					</tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/blog/nextcloud-team-coming-soon-to-nurnberg-paris/">Open Source Summit</a></td>
+						<td>Paris, France</td>
+						<td>December 10&11</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.jres.org/en/home/">JRES</a></td>
+						<td>Dijon, France</td>
+						<td>December 3-6</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.storage-forum.de/">Storage-Forum</a></td>
+						<td>Leipzig, Germany</td>
+						<td>November 28-29</td>
+                    </tr>
+                     <tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/blog/nextcloud-onlyoffice-webinar-this-wednesday/">Nextcloud - ONLYOFFICE webinar</a></td>
+						<td>Worldwide</td>
+						<td>November 20</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.it-sa.de/">it-sa</a></td>
+						<td>Nuremberg, Germany</td>
+						<td>October 8-10</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/conf">Nextcloud Contributor Week</a></td>
+						<td>Berlin, Germany</td>
+						<td>September 13 & 16-20</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/training">Nextcloud Enterprise Day</a></td>
+						<td>Berlin, Germany</td>
+						<td>September 16</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/conf/">Nextcloud Conference</a></td>
+						<td>Berlin, Germany</td>
+						<td>September 14-15</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" https://nextcloud.com/blog/upcoming-nextcloud-contributorweek-june-24-28/">Nextcloud Contributor Week</a></td>
+						<td>Stuttgart, Germany</td>
+						<td>June 24-28</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.infosecurityeurope.com/">Infosecurity Europe</a></td>
+						<td>London, UK</td>
+						<td>June 4-6</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://opentechsummit.net/">OpenTechSummit</a></td>
+						<td>Berlin, Germany</td>
+						<td>May 29-30</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" https://www.storage2day.de/</a></td>
+						<td>Heidelberg, Germany</td>
+						<td>May 17-19</td>
+                    </tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" https://no-spy.org/">No-Spy Konferenz</a></td>
+						<td>Stuttgart, Germany</td>
+						<td>May 17-19</td>
+                    </tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/blog/the-contributor-week-is-over-time-to-plan-for-the-next-one/">Nextcloud Contributor Week</a></td>
+						<td>Stuttgart, Germany</td>
+						<td>March 10-15</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/training">Nextcloud Enterprise Day</a></td>
+						<td>Stuttgart, Germany</td>
+						<td>March 12</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.socallinuxexpo.org/scale/17x">SCALE 17x</a></td>
+						<td>Pasadena, USA</td>
+						<td>March 7-10</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="http://www.didacta-cologne.com/didacta/index-3.php">Didacta</a></td>
+						<td>Cologne, Germany</td>
+						<td>February 19-23</td>
+					</tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://fosdem.org/2019/">FOSDEM</a></td>
+						<td>Brussels, Belgium</td>
+						<td>February 2-3</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.univention-summit.de/">Univention Summit</a></td>
+						<td>Bremen, Germany</td>
+						<td>January 31-February 1</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://cs3.infn.it/home.html">CS3 cloud services workshop</a></td>
+						<td>Rome, Italy</td>
+						<td>January 8-30</td>
+					</tr>
+				</table>
+			</div>
+            <a class="button button--blue" href="#2018" data-toggle="collapse">Events in 2018</a>
+                <div id="2018" class="collapse">
+                <br>
+                <table class="table table-striped">
+					<tr>
+						<th>Event</th>
+						<th>Location</th>
+						<th>Date</th>
+					</tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://events.ccc.de/congress/2018/wiki/index.php/Assembly:Nextcloud">Chaos Communication Congress</a></td>
+						<td>Leipzig, Germany</td>
+						<td>December 27-30</td>
+					</tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.opensourcesummit.paris/">Paris Open Source Summit</a></td>
+						<td>Paris, France</td>
+						<td>December 5-6</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.it-sa.de/">IT-Security Messe & Congress</a></td>
+						<td>Nuremberg, Germany</td>
+						<td>October 9-11</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://nextcloud.com/conf/">Nextcloud Conference 2018</a></td>
+						<td>Berlin, Germany</td>
+						<td>August 23-30</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://oscal.openlabs.cc/">Open Source Conference Albania</a></td>
+						<td>Tirana, Albania</td>
+						<td>May 19-20</td>
+					</tr>
+                    <tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.his.se/en/Research/informatics/Software-Systems-Research-Group/Article20180514/">Seminar at University of Skövde</a></td>
+						<td>SKÖVDE, Sweden</td>
+						<td>May 14</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://opentechsummit.net/">Open Tech Summit</a></td>
+						<td>Berlin, Germany</td>
+						<td>May 10</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://linuxfestnorthwest.org/conferences/lfnw18">LinuxFest Northwest</a></td>
+						<td>Bellingham, WA, USA</td>
+						<td>April 28-29</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://2018.fossasia.org/">FOSS Asia 2018</a></td>
+						<td>Singapore, Singapore</td>
+						<td>March 22-25</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://chemnitzer.linux-tage.de">Chemnitzer Linux Tage 2018</a></td>
+						<td>Chemnitz, Germany</td>
+						<td>March 10-11</td>
+					</tr>
+                    <tr>
+                        <td><a class="hyperlink" target="_blank" href="https://ffg.guug.de/programm-freitag/#D5">GUUG-Frühjahrsfachgespräch 2018</a></td>
+                        <td>Leipzig, Germany</td>
+                        <td>February 28-March 2</td>
+                    </tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="http://fosdem.org/">FOSDEM 2018</a></td>
+						<td>Brussels, Belgium</td>
+						<td>February 3-4</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="https://www.univention-summit.com/">Univention Summit 2018</a></td>
+						<td>Bremen, Germany</td>
+						<td>February 1-2</td>
+					</tr>
+					<tr>
+						<td><a class="hyperlink" target="_blank" href="http://cs3.cyfronet.pl/">CS3 cloud services workshop</a></td>
+						<td>Krakow, Poland</td>
+						<td>January 29-31</td>
+					</tr>
+				</table>
+			</div>
+            <br>
+            <a class="button button--blue" href="#2017" data-toggle="collapse">Events in 2017</a>
+            <div id="2017" class="collapse">
+            <br>
+            <table class="table table-striped">
+                <tr>
+                    <th>Event</th>
+                    <th>Location</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://events.ccc.de/congress/2017/wiki/index.php/Session:Nextcloud_End_to_End_Encryption">Chaos Communication Congress</a></td>
+                    <td>Leipzig, Germany</td>
+                    <td>December 26-29</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://allthingsopen.org/speakers/frank-karlitschek/">All Things Open</a></td>
+                    <td>RALEIGH, NC, USA</td>
+                    <td>October 23-24</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://www.stuttgarter-sharepointforum.de/seminartag-2017/">SharePoint Forum Stuttgart</a></td>
+                    <td>Stuttgart, Germany</td>
+                    <td>October 4</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://events.linuxfoundation.org/events/open-source-summit-north-america">Open Source Summit 2017 North America</a></td>
+                    <td>Los Angeles, USA</td>
+                    <td>September 11-14</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://conf.nextcloud.com/">Nextcloud Conference 2017</a></td>
+                    <td>Berlin, Germany</td>
+                    <td>August 22-29</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://www.bitkom.org/bfoss17/">Forum Open Source 2017</a></td>
+                    <td>Berlin, Germany</td>
+                    <td>June 20</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://www.ch-open.ch/events/open-cloud-day/detailed-program/">Open Cloud Day</a></td>
+                    <td>Bern, Switzerland</td>
+                    <td>June 14</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://sched.co/AOmp">Open Source Summit Japan</a></td>
+                    <td>Tokyo, Japan</td>
+                    <td>May 31-June 2</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://tnc17.geant.org">TNC17</a></td>
+                    <td>Linz, Austria</td>
+                    <td>May 29-June 2</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://events.opensuse.org/conference/oSC17/">openSUSE Conference</a></td>
+                    <td>Nuremberg, Germany</td>
+                    <td>May 26-28</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://eventyay.com/e/5642d9a1/">OpenTechSummit</a></td>
+                    <td>Berlin, Germany</td>
+                    <td>May 26</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://no-spy.org/">No-Spy conf</a></td>
+                    <td>Stuttgart, Germany</td>
+                    <td>May 19-21</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://oscal.openlabs.cc/">OSCAL'17</a></td>
+                    <td>Tirana, Albania</td>
+                    <td>May 13-14</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://conferences.oreilly.com/oscon/oscon-tx">OSCON</a></td>
+                    <td>Austin, TX, USA</td>
+                    <td>May 8-11</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://www.belug.de/">BeLUG</a></td>
+                    <td>Berlin, Germany</td>
+                    <td>May 3</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://foss-north.se/">foss-north</a></td>
+                    <td>Gothenburgm Sweden</td>
+                    <td>April 26</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://www.wikimedia.de/wiki/Ladies_that_FOSS">Ladies that FOSS</a></td>
+                    <td>Berlin, Germany</td>
+                    <td>April 19</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://cebit.de/en/">CeBIT</a></td>
+                    <td>Hanover, Germany</td>
+                    <td>March 23-24</td>
+                <tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://fossasia.org/">FOSSASIA Summit</a></td>
+                    <td>Singapore</td>
+                    <td>March 17-19</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://chemnitzer.linux-tage.de/2017/en">Chemnitzer Linux Tage</a></td>
+                    <td>Chemnitz, Germany</td>
+                    <td>March 11-12</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="https://www.socallinuxexpo.org/scale/15x">SCALE 15x</a></td>
+                    <td>Los Angeles, USA</td>
+                    <td>March 2-5</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://www.messe-stuttgart.de/didacta/">didacta</a></td>
+                    <td>Stuttgart, Germany</td>
+                    <td>February 14-18</td>
+                </tr>
+                <tr>
+                    <td><a class="hyperlink" target="_blank" href="http://fosdem.org/">FOSDEM 2017</a></td>
+                    <td>Brussels, Belgium</td>
+                    <td>February 4-5</td>
+                </tr>
+            </table>
+            </div>
+            <a name="ts" id="ts"></a>
+            <h2>Travel support</h2>
+            <p class="section--paragraph">For the Conference, the Contributor Week and some events where we can use the help of some volunteers, we offer travel support. With this program, we cover 80% of your travel and hotel costs for a conference, and ask you to volunteer at the event. Please note that we can only offer travel support to a limited amount of our community members, so keep in mind that if we help cover your costs, the costs of another community member who may need it more than you can't be covered - only request travel support if you need it! If you want travel support, fill in <a href="https://cloud.nextcloud.com/apps/forms/7x6yQHNpZDbgC3EP">this form.</a></p>
+		</div>
+	</div>
+</section>

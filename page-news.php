@@ -1,18 +1,36 @@
+<head>
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/generic.css?v=2" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/vendor/dsgvo-video-embed.min.css?v=2">
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/dsgvo-video-embed.min.js?v=2"></script>
+
+<div class="background generic-background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 topheader">
+                <h1>Nextcloud News</h1>
+            </div>
+        </div>
+    </div>
+</div>
+This page is the broken, old, contribook-based news page
+
+<section class="content">
+<div class="container">
+
 <?php
 require(dirname(__FILE__).'/../../../contribook/main/contribook/lib_contribook.php');
 ?>
 
 <div class="row page-content-header">
   <div class="col-sm-7">
-    <h1>Nextcloud Planet</h1>
     <a href="/blogfeed" class="rss-button"><img style="vertical-align: top;" width=35 class="img-circle" src="<?php echo get_template_directory_uri(); ?>/assets/img/social/rss.png"></img></a>
     <p>Welcome to Nextcloud News, our contributor blog roll. Nextcloud contributors should <a href="mailto:jos@nextcloud.com">ask to get added</a>!</p>
     <p>Opinions are the responsibility of those who express them. See our <a href="/privacy">privacy policy</a>.</p>
-    <p>If you'd like to stay up to date with Nextcloud news you could also <a href="https://newsletter.nextcloud.com/?p=subscribe&id=1">subscribe to our newsletter</a>!</p>
+    <p>If you'd like to stay up to date with Nextcloud news you could also <a href="https://newsletter.nextcloud.com/?p=subscribe&id=1">subscribe to our newsletter</a>! A RSS feed with only release updates can be <a href="https://github.com/nextcloud/server/releases.atom">found here <i class="icon-rss icon"></i></a></p>
   </div>
 </div>
 
-<div class="row">
+<div class="row news">
 	<div class="col-sm-7">
 		<div class="page-content">
       <?php
@@ -24,7 +42,7 @@ require(dirname(__FILE__).'/../../../contribook/main/contribook/lib_contribook.p
         echo('<div id="container" class="transitions-enabled infinite-scroll clearfix">');
         CONTRIBOOK_BLOG::show(($page-1)*5,5);
         echo('</div>');
-        
+
         // If not on ssl, show the page link
         $ssl = is_ssl() ? '' : 'style="display: block !important; margin-bottom: 60px;"';
         echo('
@@ -86,3 +104,5 @@ require(dirname(__FILE__).'/../../../contribook/main/contribook/lib_contribook.p
     </div>
   </div>
 </div>
+</div>
+</section>

@@ -1,0 +1,203 @@
+@import '../variables';
+@import '../helpers';
+@import '../vendor/modular-scale/modular-scale';
+
+section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+p {
+  margin-top: 5px;
+}
+
+ul {
+  margin-top: 15px;
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+li {
+  margin-top: 15px;
+}
+
+
+
+.jumbotron {
+    &--heading-1 {
+        padding-top: 0;
+        color: white !important;
+        font-size: ms(3) !important;
+        line-height: 120%;
+        font-weight: 500;
+        margin-bottom: 15px;
+
+
+        @media (max-width: $break-small) {
+            font-size: ms(0, 34px) !important;
+            line-height: 1 !important;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    &--lead {
+      font-size: 1.125em;
+      color: white;
+      line-height: 1.6;
+      font-weight: 500;
+      margin-bottom: 10px;
+
+      @media (max-width: $break-small) {
+        font-size: ms(0, 16px);
+        margin-bottom: 10px;
+      }
+    }
+}
+
+/* To easily color text */
+.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+
+.blue {
+    color: $nextcloud-blue;
+}
+
+.gray {
+    color: #555;
+}
+
+.text-center {
+	margin-left: auto;
+    margin-right: auto;
+	text-align: center;
+}
+
+.section {
+    &--text--center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    &--intro { /*  Introduction on top of page, just under the fold */
+        padding-top: 80px;
+        font-size: 22px;
+        font-weight: 300;
+        blockquote {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+    &--paragraph__tittle,&--paragraph__title {
+        font-size: ms(0, 22px);
+        line-height: 30px;
+        font-weight: 600;
+        color: $dark-blue;
+    }
+
+    &--paragraph {
+        font-size: ms(0);
+        font-weight: 400;
+        line-height: 1.5;
+        color: $medium-grey;
+    }
+}
+
+.hyperlink {
+    color: $medium-grey;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: solid 1px;
+    transition: all 0.5s ease;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+        color: $dark-blue;
+    }
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 120%;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 50px;
+  &.text-center,.section--text--center {
+      margin: 0px auto 50px auto;
+  }
+  @media (max-width: $break-small) {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+          &.text-center,.section--text--center {
+            margin: 0px auto 30px auto;
+        }
+    }
+}
+
+h2 {
+  font-size: 60px;
+  font-weight: 300;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 40px;
+  &.text-center,.section--text--center {
+      margin: 0px auto 40px auto;
+  }
+    @media (max-width: $break-small) {
+        font-size: 40px;
+        line-height: 1.2;
+        margin-bottom: 25px;
+          &.text-center,.section--text--center {
+                margin: 0px auto 25px auto;
+            }
+    }
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 30px;
+  &.text-center,.section--text--center {
+      margin: 0px auto 30px auto;
+  }
+  @media (max-width: $break-small) {
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+          &.text-center,.section--text--center {
+                margin: 0px auto 20px auto;
+            }
+    }
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.36;
+  color: #555;
+  margin-bottom: 20px;
+  &.text-center,.section--text--center {
+      margin: 0px auto 20px auto;
+  }
+}
+
+h5 {
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  &.text-center,.section--text--center {
+      margin: 0px auto 20px auto;
+  }
+}

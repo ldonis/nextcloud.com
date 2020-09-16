@@ -1,70 +1,101 @@
-<div class="container footer-social-icons">
-    <div>
-      <a target="_blank" href="https://plus.google.com/b/104036748063781940910/104036748063781940910/about"><img width=50 src="<?php echo get_template_directory_uri(); ?>/assets/img/social/googleplus.svg" title="Follow us on Google Plus!" alt="Follow us on Google Plus!"></img></a>
-      <a target="_blank" href="https://www.facebook.com/Nextcloud-1032807203462807/"><img width=50 src="<?php echo get_template_directory_uri(); ?>/assets/img/social/facebook.svg" title="Like our facebook page!" alt="Like our facebook page!"></img></a>
-      <a target="_blank" href="https://twitter.com/nextclouders"><img width=50 src="<?php echo get_template_directory_uri(); ?>/assets/img/social/twitter.svg" title="Subscribe to our twitter channel!" alt="Subscribe to our twitter channel!"></img></a>
-      <a target="_blank" href="https://nextcloud.com/blogfeed"><img class="img-circle" width=50 src="<?php echo get_template_directory_uri(); ?>/assets/img/social/rss.svg" title="Subscribe to our news feed!" alt="Subscribe to our news feed!"></img></a>
-      <a target="_blank" href="https://newsletter.nextcloud.com/?p=subscribe&id=1"><img width=50 src="<?php echo get_template_directory_uri(); ?>/assets/img/social/mail.svg" title="Subscribe to our newsletter!" alt="Subscribe to our newsletter!"></img></a>
-    </div>
-  </div>
-  
-<!-- https://www.instagram.com/nextclouders/ -->
-  
-<footer class="content-info" role="contentinfo">
-<div class="container">   
-   <div class="row">
-     <div class="col-sm-2 col-sm-offset-2">
-        <div class="footer-nav">
-          <h4>About Nextcloud</h4>
-          <ul id="menu-about" class="menu">
-            <li class="menu-contact"><a href="<?php get_bloginfo('url'); ?>/about/">About us</a></li>
-<!--             <li class="menu-history"><a href="<?php get_bloginfo('url'); ?>/history/">History</a></li> -->
-<!--             <li class="menu-events"><a href="<?php get_bloginfo('url'); ?>/events/">Events</a></li> -->
-            <li class="menu-privacy"><a href="<?php get_bloginfo('url'); ?>/jobs">Jobs</a></li>
-            <li class="menu-privacy"><a href="<?php get_bloginfo('url'); ?>/community/code-of-conduct/">Code of conduct</a></li>
-            <li class="menu-privacy"><a href="<?php get_bloginfo('url'); ?>/privacy/">Privacy and legal</a></li>
-          </ul>
-        </div>
-     </div>
-     <div class="col-sm-2 col-sm-offset-2">
-        <div class="footer-nav">
-<!--           <h4>Resources</h4> -->
-<!--           <ul id="menu-support-and-documentation" class="menu"> -->
-<!--             <li class="menu-faq"><a href="<?php get_bloginfo('url'); ?>/faq/">FAQ</a></li> -->
-<!--             <li class="menu-support"><a href="<?php get_bloginfo('url'); ?>/support/">Support</a></li> -->
-<!--             <li class="menu-admin-manual"><a href="<?php echo $DOCUMENTATION_ADMIN; ?>">Admin manual</a></li> -->
-<!--             <li class="menu-user-manual"><a href="<?php echo $DOCUMENTATION_USER; ?>">User manual</a></li> -->
-<!--             <li class="menu-user-manual"><a href="<?php echo $DOCUMENTATION_DEVELOPER; ?>">Developer manual</a></li> -->
-<!--             <li class="menu-security"><a href="<?php get_bloginfo('url'); ?>/security/">Security</a></li> -->
-<!--             <li class="menu-store"><a href="http://www.cafepress.com/nextcloudshop">Nextcloud Store</a></li> -->
-<!--          </ul>  -->
-        </div>
-     </div>
-     <div class="col-sm-2 <!--col-sm-offset-2-->">
-        <div class="footer-nav">
-          <h4>Interact</h4>
-          <ul id="menu-interact" class="menu">
-            <li class="menu-irc-channel"><a target="_blank" href="https://webchat.freenode.net/?channels=nextcloud">IRC Channel</a></li>
-<!--             <li class="menu-mailing-list"><a target="_blank" href="https://mailman.nextcloud.com/mailman/listinfo/">Mailing List</a></li> -->
-            <li class="menu-forums"><a target="_blank" href="https://help.nextcloud.com/categories">Forums</a></li>
-            <li class="menu-contact"><a href="<?php get_bloginfo('url'); ?>/contact/">Contact us</a></li>
-            <li class="menu-press"><a href="/press">Press</a></li>
-<!--             <li class="menu-bug-tracker"><a href="<?php echo $DOCUMENTATION_DEVELOPER; ?>bugtracker/index.html">Bug Tracker</a></li> -->
-<!--             <li class="menu-promote"><a href="/promote/">Spread the word</a></li> -->
-          </ul>
-        </div>
-     </div>
-   </div>
-   <div class="row">
-    <div class="col-lg-12 footer-text">
-      <p><font face="sans"><a href="https://github.com/nextcloud/nextcloud.com">MIT</a> &copy; </font> <?php echo date('Y'); ?> Nextcloud, <small><a href="/impressum">Legal Notice</a> </p></small>
+<?php
+
+// The basic translation for the files
+$l = new L10N('footer');
+
+?>
+<style>
+.hide {
+    display: none !important;
+}
+</style>
+<div class="alert alert--no-js" id="no-js">
+  <div class="container" style="display: inherit">
+		<?php echo file_get_contents(get_template_directory_uri()."/assets/img/warning.svg"); ?>
+    <p style="display: inherit"><strong><?php echo $l->t('You have javascript disabled.'); ?></strong> <?php echo $l->t('We tried to make sure the basics of our website work but some functionality will be missing.'); ?></p>
   </div>
 </div>
-</footer>
 
-<script type="text/javascript" async defer
-  src="https://apis.google.com/js/platform.js?publisherid=104036748063781940910">
+<script>
+    window.onload = (function(){
+        // let's hope ONE of these removes the javascript warning.
+
+        // first attempt, just adding the 'hide' class to make it display: none
+        if(document.getElementById("no-js")) {
+            var d = document.getElementById("no-js");
+            d.className += " hide";
+        }
+
+        // second attempt, let's just remove the entire thing. If it doesn't work... hope the first attempt did work. Note, IE does not support the remove method
+        if(document.querySelector("alert--no-js"))
+            document.body.removeChild(document.querySelector("alert--no-js"));
+
+    })();
 </script>
 
-<?php wp_footer(); ?>
- 
+<div class="cookiewarning" id="cookieConsent">
+    <div class="container">
+        <div class="text-center">
+            <?php echo $l->t('This website is using cookies. By visiting you agree with our'); ?> <a href="<?php echo home_url('privacy'); ?>" target="_blank"><?php echo $l->t('privacy policy.'); ?></a> <a class="cookieConsentOK"><?php echo $l->t('That\'s Fine'); ?></a>
+        </div>
+    </div>
+</div>
+
+<footer class="page-footer">
+    <div class="container">
+        <div class="col-sm-3">
+            <h1><?php echo $l->t('About Nextcloud'); ?></h1>
+            <ul>
+                <li><a href="<?php echo home_url('about'); ?>"><?php echo $l->t('About us'); ?></a></li>
+<!--                 <li><a href="<?php echo home_url('contributors'); ?>"><?php echo $l->t('Community'); ?></a></li> --><!-- broken atm -->
+                <li><a href="<?php echo home_url('events'); ?>"><?php echo $l->t('Events'); ?></a></li>
+                <li><a href="<?php echo home_url('jobs'); ?>"><?php echo $l->t('Jobs'); ?></a></li>
+                <li><a href="<?php echo home_url('/community/code-of-conduct/'); ?>"><?php echo $l->t('Code of Conduct'); ?></a></li>
+                <li><a href="<?php echo home_url('privacy'); ?>"><?php echo $l->t('Privacy'); ?></a></li>
+                <li><a href="<?php echo home_url('impressum'); ?>"><?php echo $l->t('Legal notice'); ?></a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h1 ><?php echo $l->t('Resources'); ?></h1>
+            <ul>
+                <li><a href="<?php echo home_url('search'); ?>"><?php echo $l->t('Search our website'); ?></a></li>
+                <li><a href="<?php echo home_url('install'); ?>"><?php echo $l->t('Download'); ?></a></li>
+                <li><a href="https://apps.nextcloud.com"><?php echo $l->t('App Store'); ?></a></li>
+                <li><a href="<?php echo $DOCUMENTATION_ADMIN; ?>"><?php echo $l->t('Admin manual'); ?></a></li>
+                <li><a href="<?php echo $DOCUMENTATION_USER; ?>"><?php echo $l->t('User manual'); ?></a></li>
+                <li><a href="<?php echo home_url('developer'); ?>"><?php echo $l->t('Developer program'); ?></a></li>
+                <li><a href="<?php echo home_url('security'); ?>"><?php echo $l->t('Security'); ?></a></li>
+                <li><a href="https://github.com/nextcloud"><?php echo $l->t('Code on GitHub'); ?></a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h1><?php echo $l->t('Interact'); ?></h1>
+            <ul >
+                <li><a href="<?php echo home_url('support'); ?>"><?php echo $l->t('Support'); ?></a></li>
+                <li><a href="https://help.nextcloud.com/categories"><?php echo $l->t('Forums'); ?></a></li>
+                <li><a href="https://demo.nextcloud.com"><?php echo $l->t('Demo'); ?></a></li>
+                <li><a href="<?php echo home_url('contact'); ?>"><?php echo $l->t('Contact us'); ?></a></li>
+                <li><a href="<?php echo home_url('press'); ?>"><?php echo $l->t('Press center'); ?></a></li>
+                <li><a href="<?php echo $DOCUMENTATION_BUGTRACKER; ?>"><?php echo $l->t('Bug Tracker'); ?></a></li>
+            </ul>
+        </div>
+        <div class="col-sm-3">
+            <h1><?php echo $l->t('Follow us'); ?></h1>
+            <ul >
+                <li><a href="https://www.facebook.com/Nextclouders/"><?php echo $l->t('Facebook'); ?></a></li>
+                <li><a href="https://instagram.com/nextclouders"><?php echo $l->t('Instagram'); ?></a></li>
+                <li><a href="https://www.linkedin.com/company/10827569/"><?php echo $l->t('LinkedIn'); ?></a></li>
+                <li><a href="https://youtube.com/nextcloud"><?php echo $l->t('YouTube'); ?></a></li>
+                <li><a href="https://twitter.com/nextclouders"><?php echo $l->t('Twitter'); ?></a></li>
+                <li><a href="https://mastodon.xyz/@nextcloud"><?php echo $l->t('Mastodon'); ?></a></li>
+                <li><a href="<?php echo home_url('podcast'); ?>"><?php echo $l->t('Podcast'); ?></a></li>
+                <li><a href="<?php echo home_url('blogfeed'); ?>">RSS <?php echo $l->t('Feed'); ?></a></li>
+            </ul>
+        </div>
+    <div class="row">
+		<div class="col-sm-12 text-center">
+		<p >&copy; </font> <?php echo date('Y'); ?> Nextcloud GmbH</p>
+		</div>
+	</div>
+  </div>
+</footer>

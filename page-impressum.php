@@ -1,16 +1,35 @@
-<!--<div class="row">
-    <div class="col-md-8 col-md-offset-2">-->
-<!--         <div class="page-header"> -->
-<!--             </div> -->
-<h1>Legal Notice:</h1>
-<p>Nextcloud<br/>
-Kronenstraße 22A<br/>
-70173 Stuttgart Germany<br/>
-T +49 711 89 66 56 0<br/>
-support@nextcloud.com<br/>
+<head>
+    <link href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/generic.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/vendor/dsgvo-video-embed.min.css">
+    <script src="<?php echo get_template_directory_uri(); ?>/assets/js/dsgvo-video-embed.min.js"></script>
+
+<div class="background generic-background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 topheader">
+                <h1><?php echo $l->t('Legal Notice');?></h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="content">
+<div class="container">
+<p><address>Nextcloud GmbH<br/>
+Hauptmannsreute 44a<br/>
+70192 Stuttgart Germany<br/></address>
+HRB 227086 (AG München)<br/>
+T +49 711 25 24 28 90<br/>
+VAT-ID / USt-IdNr.: DE307093598<br/>
+<a href="<?php echo home_url('contact') ?>"><?php echo $l->t('contact form');?></a><br/>
 </p>
+<p>Visitors:
+<address>Hirschstrasse 26<br/>
+70173 Stuttgart Germany<br/></address>
 <p>
-Managing Directors:<br/>
-Niels Mache<br/>
-Frank Karlitschek<br/>
-</p>
+Managing Director:<br/>
+Frank Karlitschek<br/></p>
+
+<p><?php echo $l->t('<small>All product names and trademarks are the property of their respective owners, which might in no way be associated or affiliated with Nextcloud.</small>');?></p>
+</div>
+</section>

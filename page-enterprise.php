@@ -1,102 +1,350 @@
-<!-- <?php get_template_part('templates/parts/title'); ?> -->
-<div class="page-header">
-	<h1>Privacy and control for your organization</h1>
+<head>
+<script>
+	require(["require.config"], function() {
+		require(["modules/slideshow", "modules/submenu"])
+	});
+</script>
+<link href="<?php echo get_template_directory_uri(); ?>/assets/css/pages/enterprise.css?v=6" rel="stylesheet">
+<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+<!--<script src="https://www.google.com/recaptcha/api.js?onload=CaptchaCallback&render=explicit" async defer></script>
+<script type="text/javascript">
+    var CaptchaCallback = function() {
+        grecaptcha.render('RecaptchaField1', {'sitekey' : '<?php echo RECAPTCHA_SITEKEY; ?>'});
+        grecaptcha.render('RecaptchaField2', {'sitekey' : '<?php echo RECAPTCHA_SITEKEY; ?>'});
+    };
+</script>-->
+<meta itemprop="image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/legal2.jpg">
+<meta name="twitter:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/legal2.jpg">
+<meta name="twitter:image:src" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/legal2.jpg">
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/assets/img/headers/legal2.jpg">
+</head>
+
+<section class="enterprise-hero-section background second-menu">
+    <div class="container background">
+        <div class="col-md-6 topheader">
+            <h1><?php echo $l->t('Nextcloud Enterprise');?></h1>
+            <h2><?php echo $l->t('The enterprise-ready Content Collaboration Platform');?></h2>
+        </div>
+    </div>
+	<div class="container-fluid menu" id="menuAnchor">
+		<div class="container buttons">
+			<a class="button button--blue" href="<?php echo home_url('faq') ?>"><?php echo $l->t('FAQ');?></a>
+			<a class="button button--blue" href="<?php echo home_url('enterprise/order') ?>"><?php echo $l->t('order online');?></a>
+			<a class="button button--blue" href="<?php echo home_url('enterprise/buy') ?>"><?php echo $l->t('get a quote');?></a>
+			<a class="button button--blue" href="<?php echo home_url('trial') ?>"><?php echo $l->t('Start a trial');?></a>
+			<a class="button button--blue" href="<?php echo home_url('pricing') ?>"><?php echo $l->t('pricing plans');?></a>
+		</div>
+	</div>
+</section>
+
+<section class="section--intro">
+	<div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h1 class="text-center"><?php echo $l->t('Scaleable, secure and tested');?></h1>
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise gives professional organizations software optimized and tested for mission critical environments.');?></p>
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise is backed by a Nextcloud Subscription with the services and expertise needed for quick deployment and reliable service.');?></p>
+            </div>
+		</div>
+	</div>
+</section>
+
+<!-- <div class="separator"></div> -->
+
+<section class="section--benefits">
+<!--    <h1 class="text-center"><?php echo $l->t('Nextcloud Enterprise Delivers');?></h1>
+    <p class="text-center"><?php echo $l->t('Your Nextcloud subscription enables you to successfully deploy and manage your Nextcloud instances, complimenting your IT resources and increasing the efficiency and reliability of your service.');?></p>-->
+	<div class="container">
+        <div class="row">
+            <div class="col-md-6 benefit">
+                <h2 class="text-center"><?php echo $l->t('Security');?></h2>
+<!--                 <h3 class="text-center"><?php echo $l->t('Keep your data safe');?></h3> -->
+                <div class="ilustration">
+                    <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/security-new.svg"); ?>
+                </div>
+                <div class="content">
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise customers have priority access to security and stability fixes and direct access to the most advanced security expertise in the self-hosted file sync and collaboration market.');?></p>
+<!--                     <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('secure') ?>"><?php echo $l->t('Security details');?></a></p> -->
+                </div>
+            </div>
+            <div class="col-md-6 benefit">
+                <h2 class="text-center"><?php echo $l->t('Compliance');?></h2>
+<!--                 <h3 class="text-center"><?php echo $l->t('Certification and compliance');?></h3> -->
+                <div class="ilustration integrity__ilustration">
+                    <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/data_safe-new.svg"); ?>
+                </div>
+                <div class="content">
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise is a guaranteed proven, certified code base for legal compliance legislation like the GDPR and HIPAA. You can count on our expertise, documentation and reviews.');?></p>
+<!--                     <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('gdpr') ?>"><?php echo $l->t('Compliance details');?></a></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 benefit">
+                <h2 class="text-center"><?php echo $l->t('Scalability');?></h2>
+<!--                 <h3 class="text-center"><?php echo $l->t('Costs and efficiency');?></h3> -->
+                <div class="ilustration illustration-scalability">
+                    <?php echo file_get_contents(get_template_directory_uri()."/assets/img/globalscale/final.svg"); ?>
+                </div>
+                <div class="content">
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise is pre-configured and optimized for the needs of professional organizations rather than home users.');?></p>
+                    <p class="text-center"><?php echo $l->t('Nextcloud Global Scale delivers industry-leading scalability, control over data locality and cost reduction opportunities.');?> <!--<a class="hyperlink" href="<?php echo home_url('globalscale') ?>"><?php echo $l->t('Learn about Global Scale.');?></a></p>-->
+<!--             		<p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('globalscale') ?>"><?php echo $l->t('Learn about Global Scale');?></a></p> -->
+                </div>
+            </div>
+            <div class="col-md-6 benefit">
+                <h2 class="text-center"><?php echo $l->t('Reliability');?></h1>
+<!--                 <h3 class="text-center"><?php echo $l->t('The best from the best');?></h2> -->
+                <div class="ilustration lifecycle__ilustration">
+                    <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/ilustration_matterexperts-new.svg"); ?>
+                </div>
+                <div class="content">
+                    <p class="text-center"><?php echo $l->t('Nextcloud Enterprise undergoes additional testing and quality assurance to provide you the most reliable solution. Align to your platform with a life cycle of up to 15 years.');?></p>
+                    <p class="text-center"><?php echo $l->t('Our unique approach to support gives you direct access to Nextcloud engineering expertise without a layer of call center people between you and what you need.');?></p>
+<!--                     <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('pricing') ?>"><?php echo $l->t('See pricing');?></a></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="quote section--contact">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2 class="text-center"><?php echo $l->t('Get started now!');?></h2>
+            <p class="text-center"><?php echo $l->t('We are dedicated to your success as Nextcloud customer. Make sure you have the best solution.');?></p>
+            <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('trial') ?>"><?php echo $l->t('Test Nextcloud Enterprise');?></a></p>
+        </div>
+    </div>
 </div>
+</section>
 
-<!-- <h2>Subscription options</h2> -->
-<!-- The annual Nextcloud Enterprise Subscription starts at 50 users for Eur 3200 and is available in the following options: -->
+<!--<div class="separator"></div>
 
-<!-- <table class="table table-striped"> -->
-<!-- 	<tr class="table-center"> -->
-<!-- 		<td class="info" style="min-width:250px"><i class="icon-home enterprise-icon"></i> -->
-<!-- 			<img class="responsive" style="width: 50%" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/small.png" alt="for small businesses" /> -->
-<!-- 		</td> -->
-<!-- 		<td class="info" style="min-width:250px"><i class="icon-building enterprise-icon"></i> -->
-<!-- 			<img class="responsive" style="width: 50%" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/medium.png" alt="for small businesses" /> -->
-<!-- 		</td> -->
-<!-- 		<td class="info" style="min-width:250px"><i class="icon-university enterprise-icon"></i> -->
-<!-- 		<img class="responsive" style="width: 50%" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/large.png" alt="for small businesses" /> -->
-<!-- 		</td> -->
-<!-- 	</tr> -->
-<!-- 	<tr> -->
-<!-- 		<td class="info"><h2>50-100 users</h2></td> -->
-<!-- 		<td class="info"><h2>100-5000 users</h2></td> -->
-<!-- 		<td class="info"><h2>5000+ users</h2></td> -->
-<!-- 	</tr> -->
-<!-- 	<tr> -->
-<!-- 		<td class="info">Deployment support</td> -->
-<!-- 		<td class="info">Deployment support</td> -->
-<!-- 		<td class="info">Deployment support</td> -->
-<!-- 	</tr> -->
-<!-- 	<tr> -->
-<!-- 		<td class="info">Security and hardening consulting</td> -->
-<!-- 		<td class="info">Security and hardening consulting</td> -->
-<!-- 		<td class="info">Security and hardening consulting</td> -->
-<!-- 	</tr> -->
-<!-- 	<tr> -->
-<!-- 		<td class="info">Office hours email support</td> -->
-<!-- 		<td class="info">Extended office hours email and phone support</td> -->
-<!-- 		<td class="info">All week email and phone support</td> -->
-<!-- 	</tr> -->
-<!-- 	<tr> -->
-<!-- 		<td class="active E-price">Starting at Eur 3200</td> -->
-<!-- 		<td class="active E-price">Starting at Eur 6200</td> -->
-<!-- 		<td class="active E-price">Contact us</td> -->
-<!-- 	</tr></table> -->
+<a name="security" id="security"></a>
+<section class="section--security">
+	<div class="container">
+		<h2 class="text-center"><?php echo $l->t('Security');?></h2>
+        <div class="ilustration">
+            <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/security-new.svg"); ?>
+        </div>
+        <div class="content">
+            <p class="text-center"><?php echo $l->t('Nextcloud develops its software with a rigorous focus on security through the entire life cycle of the product. Our active and passive security measures are backed by the some of the highest security bug bounties in the open source industry.');?></p>
+            <p class="text-center"><?php echo $l->t('With Nextcloud Enterprise you get priority access to security and stability fixes and direct access to the most advanced security expertise in the self-hosted file sync and collaboration market.');?></p>
+            <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('secure') ?>"><?php echo $l->t('Security details');?></a></p>
+        </div>
+	</div>
+</section>
 
-<p>Nextcloud gives organizations control over their data. Manage access to data across devices and platforms, on-premise, on existing storage or with cloud storage. Communicate through secure video and audio conferencing and leverage file sharing and collaboration capabilities, knowing your privacy is protected. Nextcloud integrates in your infrastructure, offering the extensibility and features you need combined with the logging and fine grained control over file access and communication required in regulated industries.</p>
+<div class="separator"></div>
+<a name="compliance" id="compliance"></a>
+<section class="section--compliance">
+	<div class="container">
+        <h2 class="text-center"><?php echo $l->t('Compliance');?></h2>
+        <div class="ilustration integrity__ilustration">
+            <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/data_safe-new.svg"); ?>
+        </div>
+        <div class="content">
+            <p class="text-center"><?php echo $l->t('Nextcloud Enterprise is a guaranteed proven, certified code base for legal compliance legislation like the GDPR and HIPAA. You can count on our expertise, documentation and reviews.');?></p>
+            <p class="text-center"><?php echo $l->t('Hundreds of the world\'s most sensitive productivity platforms depend on Nextcloud to provide teams with a secure environment to work in. Our certification offers the certainty they need.');?></p>
+            <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('gdpr') ?>"><?php echo $l->t('Compliance details');?></a></p>
+        </div>
+	</div>
+</section>
 
-<h2>Enterprise capabilities</h2>
-<!--<p>If you need to handle hundreds to hundreds of thousands of users, terabytes to petabytes of data, require high availability and multi-server scaling, need integration in enterprise infrastructure and/or have specific needs around compliance in regulated industries, our Enterprise offering is perfect for you.</p>-->
-<p>Nextcloud offers you a full open source file sync & share and collaboration solution, including:
-<ul>
-	<li>File sync and share from any device and with an easy to use web interface</li>
-	<li>Access to all data in your organization, no matter where it is stored</li>
-	<li>Seamless collaboration and communication built in</li>
-	<li>Fully secure and encrypted data handling<!-- with fine grained file access control--></li>
-	<li>Compliance capabilities with <!--retention,--> logging and auditing</li>
-	<!--<li>Calendar, Contacts and secure video and audio conferencing</li>-->
-	<li>We continuously improve our product and add new capabilities in close collaboration with partners and customers</li>
-</ul>
-</p>
+<div class="separator"></div>
 
-<h2>The Nextcloud Enterprise Subscription</h2>
-<p>We can provide you the confidence of knowing that your Nextcloud deployment is backed by the technical expertise of the team behind the product and with the features you need for your organization.</p>
-
-<p>With the Nextcloud Enterprise subscription you get:
-<ul>
-	<li>Full lifecycle support, from project inception to production and user growth</li>
-	<li>Help to scale your Nextcloud installation to large amounts of storage and large numbers of users</li>
-	<li>Security and hardening consulting</li>
-	<li>Influence on the roadmap of the open source project</li>
-	<li>Access to the core Nextcloud engineers</li>
-	<li>Access to consulting for custom capabilities</li>
-<!-- 	<li>Support for branding Nextcloud</li> -->
-<!-- 	<li>Full support for integrated video conferencing and communication features based on spreed.me and WebRTC </li> -->
-</ul>
+<a name="scalability" id="scalability"></a>
+<section class="section--scalability">
+	<div class="container">
+		<h2 class="text-center"><?php echo $l->t('Scalability');?></h2>
+        <div class="ilustration illustration-scalability">
+            <?php echo file_get_contents(get_template_directory_uri()."/assets/img/globalscale/final.svg"); ?>
+        </div>
+        <div class="content">
+            <p class="text-center"><?php echo $l->t('Nextcloud Enterprise is pre-configured and optimized for the needs of professional organizations rather than home users.');?></p>
+            <p class="text-center"><?php echo $l->t('Our unique Nextcloud Global Scale architecture delivers scalability to hundreds of millions of users, unprecedented control over the locality of data and dramatic cost reduction opportunities at large scale storage and database level.');?>
+            <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('globalscale') ?>"><?php echo $l->t('Learn about Global Scale');?></a></p>
+        </div>
+	</div>
+</section>
 
 
+<div class="separator"></div>
 
-<h3>Contact us for more information and a quote.</h3>
+<a name="reliability" id="reliability"></a>
+<section class="section--reliability">
+	<div class="container">
+		<h2 class="text-center"><?php echo $l->t('Reliability');?></h1>
+        <div class="ilustration lifecycle__ilustration">
+            <?php echo file_get_contents(get_template_directory_uri()."/assets/img/enterprise/ilustration_matterexperts-new.svg"); ?>
+        </div>
+        <div class="content">
+            <p class="text-center"><?php echo $l->t('Nextcloud Enterprise undergoes additional testing and quality assurance to provide you the most reliable solution. Align to your platform with a life cycle of up to 15 years.');?></p>
+            <p class="text-center"><?php echo $l->t('We are dedicated to your success as Nextcloud customer. Our unique approach to support gives you direct access to Nextcloud engineering expertise. There is no layer of call center people between you and what you need, giving you the equivalent of a dedicated on-site engineering team.');?></p>
+            <p class="text-center"><a class="button button--white button--arrow" href="<?php echo home_url('pricing') ?>"><?php echo $l->t('See pricing');?></a></p>
+        </div>
+	</div>
+</section>-->
 
-<form name="sales" method="post" action="salessubmit/">
-<!--<div class="row">
-	<div class="col-md-12">-->
-		<p><label for="yourname">Your name<br>
-		<input  type="text" name="yourname" maxlength="60" size="60"></label></p>
-		<p><label for="email">Email<br>
-		<input  type="text" name="email" maxlength="80" size="60"></label></p>
-		<p><label for="organization">Organization<br>
-		<input  type="text" name="organization" maxlength="80" size="60" placeholder=""></label></p>
-		<p><label for="phone">Phone number<br>
-		<input  type="text" name="phone" maxlength="40" size="60" placeholder="Please include country code"></label></p>
-		<p><label for="comments">Your message<br />
-		<textarea  name="comments" maxlength="1000" cols="60" rows="6" placeholder="Let us know how we can help you!"></textarea></label></p>
-		<td colspan="2" style="text-align:center">
-		<input type="submit" value=" Submit inquiry ">
-<!--	</div>
-</div>-->
-</form>
+<!-- <div class="separator"></div> -->
 
+<?php require get_template_directory().'/verticals.php';?>
 
 
+<a name="capabilities" id="capabilities"></a>
+<section class="section--whitepaper">
+    <div class="container">
+        <h3 class="section--intro text-center"><?php echo $l->t('What you need');?></h3>
+        <h1 class="text-center section--heading-1"><?php echo $l->t('Nextcloud Enterprise Capabilities');?></h1>
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class=""><?php echo $l->t('Deep integration in your infrastructure');?></h3>
+                <p><?php echo $l->t('Nextcloud offers LDAP/Active Directory, SAML and Kerberos authentication. It accesses data on NFS, (s)FTP, WebDAV, Windows Network Drive, Object Stores like SWIFT and many others.');?></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <form name="whitepaper" method="post" action="<?php echo get_template_directory_uri()."/mautic-submit.php" ?>">
+                    <p><label for="email"><?php echo $l->t('Download our Architecture whitepaper!');?><br>
+                    <td colspan="2">
+                    <div class="">
+                        <div id="RecaptchaField1"></div>
+                    </div>
+                    </td>
+                    <input type="hidden" name="segmentId" value="1">
+                    <input class="mail" type="text" name="email" maxlength="80" placeholder="<?php echo $l->t('Enter your email');?>"></label>
+                    <div class="newsletter">
+                        <input type="hidden" name="newsletter" value="0" />
+<!--                         <input type="checkbox" name="newsletter" value="1"> <small>Sign me up for the Nextcloud newsletter</small><br/> -->
+                        <input type="hidden" name="moreinfo" value="0" />
+                        <input type="checkbox" name="moreinfo" value="1"> <small><?php echo $l->t('Inform me about new white papers and other relevant information');?></small><br/>
+                        <small><?php echo $l->t('See our');?> <a class="hyperlink" href="<?php echo home_url('privacy') ?>"><?php echo $l->t('privacy policy');?></a></small>
+                    </div>
+                    <input class="button button--blue button--large" type="submit" value=" <?php echo $l->t('Get the whitepaper');?> "></p>
+                </form>
+            </div>
+        </div>
+        <img class="responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/whitepapers/architecture-thumbnail-banner.png"/>
+    </div>
+</section>
+
+<!--<section class="section--whitepaper quote">
+	<div class="container">
+        <div class="row">
+			<div class="col-lg-8">
+                <h2><?php echo $l->t('<span class="avoidwrap">How the TU Berlin delivers</span> <span class="avoidwrap">file sync and share</span> <span class="avoidwrap">to 22.000 users</span>');?></h2>
+                <form name="whitepaper" method="post" action="<?php echo get_template_directory_uri()."/mautic-submit.php" ?>">
+                    <p><label for="email"><?php echo $l->t('Download our free case study: <br /> TU Berlin and 9 other institutions migrate to Nextcloud');?><br>
+                    <td colspan="2" style="text-align:center">
+                    <div class="">
+                        <div id="RecaptchaField2"></div>
+                    </div>
+                    </td>
+                    <input type="hidden" name="segmentId" value="5">
+                    <input class="mail" type="text" name="email" maxlength="80" placeholder="<?php echo $l->t('Enter your email');?>"></label>
+                    <div class="newsletter">
+                        <input type="hidden" name="newsletter" value="0" />
+                        <input type="hidden" name="moreinfo" value="0" />
+                        <input type="checkbox" name="moreinfo" value="1"> <small><?php echo $l->t('Inform me about new white papers and other relevant information');?></small><br/>
+                        <small><?php echo $l->t('See our');?> <a class="hyperlink" href="<?php echo home_url('privacy') ?>"><?php echo $l->t('privacy policy');?></a></small>
+                    </div>
+                    <input class="button button--large" type="submit" value=" <?php echo $l->t('Get the case study');?> "></p>
+                </form>
+            </div>
+        </div>
+        <img class="responsive" src="<?php bloginfo('template_directory'); ?>/assets/img/whitepapers/tub-thumbnail-banner.png"/>
+	</div>
+</section>-->
+<!--
+
+<section class="section--customers">
+<div class="container">
+    <h1 class="text-center"><?php echo $l->t('Nextcloud in Education');?></h1>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+            <p class="section--paragraph text-center"><?php echo $l->t('With the Nextcloud Education Edition a unique offering is available providing Moodle integration, Zenodo publishing, SAML authentication, collaboration features and more.');?></p>
+		</div>
+	</div>
+    <div class="row">
+		<div class="col-sm-3 customer">
+            <div class="customer-logo">
+                <a href="https://nextcloud.com/blog/9-german-educational-and-research-institutions-move-to-nextcloud-as-part-of-tu-berlin-migration-more-coming/"><img class="" src="<?php echo get_template_directory_uri(); ?>/assets//img/customers/tuberlin.png" /></a>
+            </div>
+        </div>
+		<div class="col-sm-3 customer">
+            <div class="customer-logo">
+                <a href="https://nextcloud.com/blog/3000-users-at-ucloud4schools-migrated-to-nextcloud-11-by-regio-it/"><img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/customers/regioit.png" /></a>
+            </div>
+        </div>
+        <div class="col-sm-3 customer">
+            <div class="customer-logo">
+            <a href="https://nextcloud.com/blog/the-danish-research-and-education-network-moves-from-owncloud-to-nextcloud/"><img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/customers/deic.png" /></a>
+            </div>
+        </div>
+        <div class="col-sm-3 customer">
+            <div class="customer-logo">
+            <a href="http://my.engineering.queensu.ca/"><img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/customers/queens.png" /></a>
+            </div>
+        </div>
+        <div class="text-center"><a class="button button--blue button--arrow button--large" href="<?php echo home_url('education') ?>">Learn more</a></div>
+    </div>
+</div>
+</section>-->
+
+<section class="slideshow" id="slideshow">
+	<div class="indicators">
+		<ul class="carousel_dots"></ul>
+		<li class="btn_carousel"><a href="#feature-1"></a></li>
+		<li class="btn_carousel"><a href="#feature-2"></a></li>
+		<li class="btn_carousel"><a href="#feature-3"></a></li>
+		<li class="btn_carousel"><a href="#feature-4"></a></li>
+	</div>
+    <div class="container">
+        <div class="col-md-6 ">
+        	<div class="container-image-center" id="imageTrigger">
+	            <img class="image-back" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/capabilities-back.png">
+	            <div class="image-top-container">
+	            	<img class="img-responsive image-top image__desktop" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/sprite_screen.jpg">
+	            	<img class="img-responsive image-top image__mobile" src="<?php echo get_template_directory_uri(); ?>/assets/img/enterprise/sprite_screen_mobile.jpg">
+	            </div>
+            </div>
+        </div>
+        <div class="texts-wrapper col-md-6">
+	        <div class="right-text-grey" data-slide="1">
+	            <h5 class="textTrigger" id="feature-1"><?php echo $l->t('Monitoring and compliance');?></h5>
+	            <p><?php echo $l->t('Nextcloud offers extensive monitoring and compliance capabilities ready for enterprises in sensitive businesses. Data locality, retention and access can be controled and logged for audit.');?></p>
+                   <a class="button button--blue button--arrow button--large" href="<?php echo home_url('monitoring') ?>" role="button"><?php echo $l->t('Learn more about monitoring');?></a>
+                </p>
+	        </div>
+
+	         <div class="right-text-grey" data-slide="2">
+	            <h5 class="textTrigger" id="feature-2"><?php echo $l->t('Security features keep your data safe');?></h5>
+	           <p><?php echo $l->t('Nextcloud supports two-factor authentication and Server Side Encryption, has brute force protection and features industry-standard security measures like CSP, SSC and password and session management.');?></p>
+                  <a class="button button--blue button--arrow button--large" href="<?php echo home_url('secure') ?>" role="button"><?php echo $l->t('Learn more about security');?></a>
+               </p>
+	        </div>
+
+	        <div class="right-text-grey" data-slide="3">
+	            <h5 class="textTrigger" id="feature-3"><?php echo $l->t('IT stays in control');?></h5>
+	            <p><?php echo $l->t('Our File Access Control app enables administrators to defining data access rules or triggering actions based on location, group membership, file type, tags and other properties.');?></p>
+                   <a class="button button--blue button--arrow button--large" href="<?php echo home_url('workflow') ?>" role="button"><?php echo $l->t('Learn more about Workflow');?></a>
+                </p>
+	        </div>
+
+	        <div class="right-text-grey" data-slide="4">
+	            <h5 class="textTrigger" id="feature-4"><?php echo $l->t('Easy access for users');?></h5>
+	            <p><?php echo $l->t('Users can access and share their data on Nextcloud through sync clients for Windows, Linux and Mac as well as Android and IOS, providing a smooth experience no matter where data is located.');?></p>
+                   <a class="button button--blue button--arrow button--large" href="<?php echo home_url('clients') ?>" role="button"><?php echo $l->t('Learn more about clients');?></a>
+                </p>
+	        </div>
+        </div>
+    </div>
+</section>
+<section class="section--compare">
+<div class="calltoaction">
+	<h1 class="section--heading-2 section--text--center"><?php echo $l->t('See how we stack up');?></h1>
+	<p class="section--paragraph section--text--center">
+	<a href="<?php echo home_url('compare') ?>" class="button button--blue button--arrow button--large"><?php echo $l->t('Compare Nextcloud to other solutions');?></a></p>
+</div>
+</section>

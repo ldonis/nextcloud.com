@@ -1,0 +1,3670 @@
+
+/*---- General ----*/
+
+/* enable to reveal boxes everywhere	*/
+/** {
+	border-style: solid;
+	border-color: red;
+ }*/
+body {
+	font-family: "Open Sans", Frutiger, Calibri, "Myriad Pro", Myriad, sans-serif !important;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale; }
+
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Open Sans'), local('OpenSans'), url(../../fonts/OpenSans-Regular.woff) format('woff'), url(../../fonts/OpenSans-Regular.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: bold;
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../../fonts/OpenSans-Semibold.woff) format('woff'), url(../../fonts/OpenSans-Semibold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: italic;
+	font-weight: normal;
+	src: local('Open Sans Italic'), local('OpenSans-Italic'), url(../../fonts/OpenSans-Italic.woff) format('woff'), url(../../fonts/OpenSans-Bold.ttf) format('ttf');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: light;
+	src: local('Open Sans Light'), local('OpenSans-Light'), url(../../fonts/OpenSans-Light.woff) format('woff'), url(../../fonts/OpenSans-Light.ttf) format('ttf');
+}
+
+span.avoidwrap {
+	display:inline-block;
+}
+
+@media only screen and (max-width: 700px) {
+	div .hideonsmall {
+		display: none;
+	}
+}
+/* make code areas scrollable */
+code {
+	overflow-x: scroll;
+	overflow-wrap: break-word;
+}
+
+/* Make background white, font grey and default buttons a bit darker to compensate */
+body {
+	font-family: 'Open Sans', Frutiger, Calibri, 'Myriad Pro', Myriad, sans-serif !important;
+	color: #555;
+	background: #fff;
+}
+
+
+h1, h2, h3 {
+	font-weight: 300;
+}
+h4 {
+	font-weight: 600;
+}
+h1 {
+	font-size: 45px;
+}
+h2 {
+	font-size: 35px;
+	margin-bottom: 12px;
+}
+h3 {
+	font-size: 27px;
+	margin: 12px 0;
+}
+h4 {
+	font-size: 22px;
+	margin: 12px 0;
+}
+h5 {
+	font-size: 22px;
+	margin: 12px 0;
+}
+/* A nice looking block quote */
+blockquote {
+  background: none;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "“" "”" "‘" "’";
+  border-left: none;
+  color: #9c9c9c; }
+  blockquote:before {
+    border-left: none;
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+    font-family: serif; }
+  blockquote:after {
+    content: close-quote;
+    left: 10px;
+    color: #ccc;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 0.25em;
+    vertical-align: -0.8em;
+    font-family: serif; }
+
+blockquote p {
+	display: inline;
+}
+
+.pr blockquote {
+	margin: 0 0 -15px 0;
+	padding: 10px 10px 0px 10px;
+}
+
+.pr p {
+	margin: 0 0 30px;
+}
+.btn {
+	border-radius: 50px;
+	line-height: 1.7;
+}
+/* Put images in blog really in center */
+.aligncenter {
+	margin: auto auto !important;
+	max-width:100%;
+	height: auto;
+}
+
+
+.btn-default {
+/* 	background: rgba(240,240,240,.9); */
+/* 	border: 1px solid rgba(210,210,210,.9); */
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open > .dropdown-toggle.btn-default {
+/* 	background: white; */
+/* 	border: 1px solid rgba(240,240,240,.9); */
+}
+
+.btn-primary {
+	background: #0082C9;
+	border: 1px solid #0062C9;
+	color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+/* 	background: #428BCA; */
+/* 	border: 1px solid #0082C9; */
+/* 	color: white; */
+}
+
+.btn-secondary {
+	border: 1px solid #cccccc;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active, .btn-secondary.active, .open > .dropdown-toggle.btn-secondary {
+	border: 1px solid #adadad;
+	background: #e6e6e6;
+}
+
+
+
+.no-underline a {
+	border: 0px none transparent !important;
+}
+
+/* Remove line under page headers (defined in main.min.css) */
+
+/**
+ * Navbar
+ */
+.navbar .btn-primary {
+	background-color: #0082c9;
+	overflow: hidden;
+	border: none;
+	border-radius: 100px;
+	padding-top: 18px;
+	height: 60px;
+	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	transition: all 0.3s ease 0s; }
+.navbar .btn-primary:hover {
+	background-color: #0082c9 !important; }
+.navbar .btn-primary:active {
+	-webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+	background-color: #0073B2; }
+
+@media (max-width: 1200px) {
+	.navbar-header {
+		float: none; }
+
+	.navbar-left, .navbar-right {
+		float: none !important; }
+
+	.navbar-toggle {
+		display: block; }
+
+	.navbar-collapse {
+		border-top: 1px solid transparent;
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+
+	.navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px; }
+
+	.navbar-collapse.collapse {
+		display: none !important; }
+
+	.navbar-nav {
+		float: none !important;
+		margin-top: 7.5px; }
+
+	.navbar-nav > li {
+		float: none; }
+
+	.navbar-nav > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px; }
+
+	.collapse.in {
+		display: block !important; } }
+.navbar {
+	background-color: #0080cc;
+	height: 100px;
+	transition: all .2s ease-in;
+	padding-top: 25px;
+
+}
+.Header-Navigation {
+	padding-bottom: 120px;
+}
+.brand > img {
+	height: 50px;
+	margin-top: 2px;
+}
+
+#navbar {
+/* 	padding-top: 25px; */
+	font-size: 16px; }
+@media (min-width: 1200px) {
+	#navbar a {
+		color: white; }
+}
+
+
+#navbar .active {
+	font-weight: 600; }
+@media (min-width: 1200px) {
+	.Header-Navigation .navbar li:last-child {
+    padding-left: 30px;
+    padding-right: 30px;
+	}
+}
+.navbar > .container-fluid {
+	margin-left: 5%;
+	margin-right: 5%;
+	padding-right: 0 !important;
+	padding-left: 0 !important; }
+
+@media (min-width: 768px) {
+	.navbar-nav li {
+		margin: 0 0 0 10px; } }
+.navbar-nav li a:hover {
+	background: none !important; }
+@media (min-width: 1100px) {
+	.navbar-nav li a:hover {
+		color: white; } }
+@media (min-width: 1100px) {
+	.navbar-nav li:before {
+		display: inline-block;
+		position: relative;
+		padding-bottom: 1px; }
+	.navbar-nav li:after {
+		content: '';
+		display: block;
+		margin: auto;
+		height: 3px;
+		width: 0;
+		background: transparent;
+		transition: width .2s ease, background-color .2s ease; }
+	.navbar-nav li:not(.btn-primary):not(.active):hover:before {
+		width: 100%;
+		background: white;
+		transition: width .2s ease-in; }
+	.navbar-nav li:not(.btn-primary):not(.active):hover:after {
+		width: 100%;
+		background: white; } }
+
+/**
+ * Scrolled navbar style
+ */
+.navbar.scrolled {
+	transition: all .2s ease-in;
+	background: white;
+	box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.09); }
+.navbar.scrolled a {
+	color: #656565 !important; }
+.navbar.scrolled .navbar-nav li:not(.btn-primary):not(.active):hover:before {
+	width: 100%;
+	background: #656565;
+	transition: width .2s ease-in; }
+.navbar.scrolled .navbar-nav li:not(.btn-primary):not(.active):hover:after {
+	width: 100%;
+	background: #656565; }
+@media (min-width: 1100px) { }
+.navbar.scrolled .btn-primary a {
+	color: white !important; }
+@media (max-width: 1100px) {
+	.navbar.scrolled .navbar-collapse {
+		background-color: #ffffff;
+		margin-left: -6% !important; } }
+
+/**
+ * Collapsed navbar
+ */
+@media (max-width: 1100px) {
+	.navbar-collapse {
+		padding-left: 0;
+		padding-right: 0;
+		width: calc(100vw + 1%);
+		min-height: 100vh;
+		background-color: #0082c9;
+		margin-left: -6% !important;
+		box-shadow: none;
+		transition: all .2s ease-in; }
+	.navbar-collapse ul {
+		margin-right: 5%;
+		margin-left: 5%;
+		text-align: center;
+		min-height: 540px; }
+	.navbar-collapse ul li {
+		padding-top: 3vh;
+		font-size: 35px; } }
+
+.navbar-toggle .icon-bar {
+	width: 22px;
+	transition: all 0.2s; }
+.navbar-toggle .top-bar {
+	transform: rotate(45deg);
+	transform-origin: 22.5%; }
+.navbar-toggle .middle-bar {
+	opacity: 0; }
+.navbar-toggle .bottom-bar {
+	transform: rotate(-45deg);
+	transform-origin: 22.5%; }
+
+.navbar-toggle.collapsed .top-bar {
+	transform: rotate(0deg); }
+
+.navbar-toggle.collapsed .middle-bar {
+	opacity: 1; }
+
+.navbar-toggle.collapsed .bottom-bar {
+	transform: rotate(0deg); }
+
+.menu-install {
+	background: #0082c9 !important;
+}
+
+.install-nav {
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.install-nav>li {
+	position: relative;
+    display: block;
+}
+
+.install-nav>li>a {
+	position: relative;
+    display: block;
+    padding: 10px 15px;
+	text-decoration: none;
+}
+
+.menu-install:hover	{
+/* 	background: #428bca !important; */
+}
+
+.page-header {
+	margin-top: 40px !important;
+	border-bottom: 0px solid #EEE;
+}
+
+div.page-header {
+border-bottom: 0px solid #EEE;
+}
+/* Remove border from navbar (defined in main.min.css) */
+.navbar {
+border: 1px solid transparent;
+}
+
+.banner img {
+	padding: 15px 0;
+}
+
+div.box-head {
+	display: none;
+}
+
+h3.ft-title {
+	text-align: center;
+	font-weight: 100;
+	font-size: 23px;
+}
+
+h2.featuretitle {
+	font-weight: 400;
+	font-size: 25px;
+}
+
+h1.featuretitle {
+	padding-bottom: 20px;
+}
+
+.featureimg {
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+}
+
+.page-content-header > div > h1 {
+	display: inline;
+	margin-top: 0;
+}
+
+.page-content-header > div > a.rss-button {
+	vertical-align: baseline;
+	margin-left: 20px;
+	color: rgb(206, 91, 0);
+}
+
+.page-content-header > div > form > input[type=text] {
+	display: inline;
+	width: 78%;
+}
+
+.banner ul#menu-header.nav>li:not(.menu-install) >a:hover {
+	border-bottom: 2px solid white;
+	margin-bottom: 17px;
+}
+
+.banner ul#menu-header.nav>li>a {
+	padding-bottom: 6px;
+	font-size: 1em;
+/* 	margin-bottom: 21px; */
+}
+
+div.sub-nav {
+	margin-top: -20px;
+	padding-bottom: 20px;
+}
+
+li.top-nav-active > a {
+	border-bottom: 2px solid white;
+}
+
+div.feature-wide-row-wrap {
+	background-color: #0082C9;
+	color: white;
+	padding-bottom: 20px;
+}
+
+div.feature-wide-row-wrap div.featureblock{
+	text-align: center;
+	padding-top: 15px;
+	font-weight: 200;
+}
+
+div.feature-wide-row-wrap div.featureblock i {
+	font-size: 25px;
+}
+
+div.feature-wide-row-wrap div.featureblock h3.ft-title {
+	margin-top: 0;
+}
+
+/*	the header */
+
+.navbar-header .logo {
+	width: 121px;
+	height: 85px;
+}
+
+.banner ul#menu-header.nav>li.menu-get-owncloud {
+	padding: 0 0 0 15px;
+	margin-top: 7px;
+	margin-left: 10px;
+	background-color: #428BCA;
+	border-radius: 6px;
+	border-color: #357EBD}
+
+.banner ul#menu-header.nav>li.menu-get-owncloud a{
+	padding: 7px 16px 7px 0;
+	line-height: 1.25;
+	border-bottom: 0
+}
+
+.contribook_bloguserpicture img {
+	margin-right: 0;
+}
+
+i[class*='icon-'] {
+	font-style: normal;
+}
+/* Try to make thumbnails in wordpress have some distance to the text */
+.thumbnail {
+	margin: 5px;
+}
+
+.alignright {
+	margin: 1em 1em 1em 1em !important;
+}
+
+/*	Make YouTube videos responsive */
+@media(min-width: 995px) {
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 28.12%; /* 16:9 - lets them be quarter screen size.	56.25% for full */
+		padding-top: 25px;
+		width: 50%; /* 100%	for full screen size */
+		height: 0;
+	}
+	.videoWrapper iframe {
+		position: absolute;
+		margin-left: 50%;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@media(max-width: 996px) {
+	.videoWrapper {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		width: 100%;
+		padding-left: -50%;
+	}
+
+	.videoWrapper iframe, .videoWrapper object, .videoWrapper embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+/* the blog roll nextcloud.com/news */
+
+.news .contribook_bloguser {
+	margin-right: -50px;
+}
+
+.floatright {
+	float: right;
+	width: 40%;
+	max-width: 500px;
+	min-width: 250px;
+
+}
+
+@media (max-width: 600px) {
+	.floatright {
+		float: none;
+		width: 100%;
+	}
+}
+
+.news .contribook_blogheadline {
+	font-weight: 500;color: black;
+	font-size: 2em;
+	padding-top: 30px;
+}
+
+.post h1,h2,h3 {
+	font-weight: 500;color: black;
+}
+
+div.blog-social-icons > div img {
+	width: 40px;
+	margin: 0;
+}
+
+div.blog-social-icons > div a:hover {
+	text-decoration: none;
+}
+
+.box.masonry-brick img {
+	max-width: 100%;
+	height: auto;
+}
+
+.masonry-brick {
+	max-width: 100%;
+	padding-bottom: 20px;
+	border-bottom: 6px grey;
+	border-bottom: 20px solid #8080803b;
+}
+
+article.post figcaption {
+	margin-top: -14px;
+}
+
+@media (max-width: 600px) {
+	article.post figure {
+		float: none;
+	}
+}
+
+#meetup-embed-largest-owncloud {
+	max-width: 400px;
+}
+
+/* home */
+
+.home div.wrap > .content {
+	background-size: 85% auto;
+	background-position: top center;
+}
+
+.content.row, .row.row-slogan {
+	margin-top: 0;
+}
+
+.row.row-slogan {
+	float: left;
+	width: 100%;
+}
+
+a.join-button {
+	width: 70%;
+		margin: 0 auto;
+}
+
+div.alert-info > a {
+	text-decoration: underline;
+}
+
+i.icon-opensource {
+	background: url("../img/opensource.svg") no-repeat;
+	display: inline-block;
+	width: 27px;
+	background-size: 27px;
+	background-position: center;
+	margin-right: 6px;
+}
+
+.home p.explain-short {
+	text-align: center;
+	font-weight: 200;
+	font-size: 20px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+	.banner ul#menu-header.nav {
+		width: inherit;
+		padding-top: 20px;
+	}
+
+	.home h2.slogan {
+		left: 245px;
+		top: -71px;
+	}
+}
+
+div.row.home-row > div{
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+div.home-ft-content {
+	text-align: center;
+}
+
+div.row.home-row h2 {
+	margin-top: 0;
+	font-size: 24px;
+	font-weight: 300;
+}
+
+.home div.col-xs-12 > i {
+	font-size: 28px;
+}
+
+.home a.events-button {
+	color: #428BCA;
+	background-color: #FFFFFF;
+	border: 1px solid #428BCA;
+	font-weight: 700;
+}
+
+.home div.join a.join-button {
+	margin-bottom: 23px;
+}
+
+.home div.row.pad-bottom {
+	margin-bottom: 45px;
+}
+
+.home .row {
+	padding-bottom: 0 !important;
+}
+
+@media (max-width: 991px) {
+ 	.home-header-image {
+ 		margin-top: 2em !important;
+ 	}
+
+	.header .row.image {
+		margin-top: 30px;
+	}
+
+	.home h2.slogan {
+		display: none;
+	}
+
+	.home h2.slogan-mobile {
+		display: block !important;
+	}
+ }
+
+
+.home .home-row a.feature-link {
+	margin-bottom: 30px;
+}
+
+.home h2 {
+	margin-bottom: 20px;
+}
+
+.home h2.slogan-mobile {
+	display: none;
+	font-size: 20px;
+	text-align: center;
+}
+
+.home-ent-button {
+	font-weight: 100;
+}
+
+
+@media (max-width: 1200px) {
+
+div.customers {
+	margin-top:20px;
+	margin-bottom:20px;
+	text-align: center;
+
+}
+}
+/*---- Federation Page ---- */
+p.federation-id {
+			font-size: 20px;
+			 	font-weight: 100;
+
+}
+
+/*---- App store approval form Page ---- */
+.appform label {
+				font-weight: normal;
+
+}
+
+/**---- Jobs page ---- */
+.jobs h3 {
+				margin-top: 25px;
+
+}
+
+
+/*---- Enterprise page ---- */
+
+.epricevat {
+	font-weight: light;
+	font-size: small;
+	text-align: right;
+	padding: 5px;
+	margin-top: -20px;
+}
+
+.egetstarted .btn-primary {
+	font-size: 24px;
+	font-weight: 600;
+	padding: 18px 24px;
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.intro-text {
+
+}
+
+.einfo span:hover {
+	border-bottom: 1px dotted gray;
+/* 	cursor: pointer; */
+}
+
+.table-center {
+	text-align: center !important;
+}
+
+.enterprise-icon {
+	font-size:80px;
+	color: #0082c9;
+}
+
+.blue {
+	color: #0082c9;
+}
+
+.price {
+	color: #0082c9;
+	font-weight: 80%;
+	text-align: center;
+
+}
+
+.ebasic {
+	background-color: #d9f2ff !important;
+}
+
+.epro {
+	background-color: #c6ecff !important;
+}
+
+.eenterprise {
+	background-color: #ace4ff !important;
+}
+
+.eintro {
+	font-size: 115%;
+}
+
+/*---- history page ---- */
+
+
+
+/** new-timeline box structure **/
+.new-timeline {
+	list-style: none;
+	padding: 20px 0 20px;
+	position: relative;
+}
+
+.new-timeline:before {
+	top: 0;
+	bottom: 0;
+	position: absolute;
+	content: " ";
+	width: 5px;
+	background-color: #d7e4ed;
+	left: 50%;
+	margin-left: -2.5px;
+}
+
+
+.tldate {
+	display: block;
+	margin: 0 auto;
+	padding: 3px 0;
+	font-weight: bold;
+	text-align: center;
+	margin-left:17px;
+}
+
+.new-timeline li {
+	margin-bottom: 25px;
+	position: relative;
+	height: 100px;
+/*	clear: both;*/
+}
+
+.new-timeline li::before, .new-timeline li::after {
+		content: " ";
+		display: table;
+}
+
+/** new-timeline panels **/
+.new-timeline li .new-timeline-panel {
+	width: 46%;
+	border: 1px solid #d4d4d4;
+	padding: 20px;
+	background:	#fff;
+	float: left;
+	position: relative;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+	z-index: 10;
+}
+
+/** when left or right of an image, you need extra height... **/
+.tl-image-200 {
+	height: 200px !important;
+}
+
+.tl-image-400 {
+	height: 400px !important;
+}
+
+.tl-image-500 {
+	height: 500px !important;
+}
+
+/** panel arrows **/
+.new-timeline li .new-timeline-panel:before {
+	position: absolute;
+	top: 26px;
+	right: -15px;
+	display: inline-block;
+	border-top: 15px solid transparent;
+	border-left: 15px solid #ccc;
+	border-right: 0 solid #ccc;
+	border-bottom: 15px solid transparent;
+	content: " ";
+}
+
+.new-timeline li .new-timeline-panel:after {
+	position: absolute;
+	top: 27px;
+	right: -14px;
+	display: inline-block;
+	border-top: 14px solid transparent;
+	border-left: 14px solid #fff;
+	border-right: 0 solid #fff;
+	border-bottom: 14px solid transparent;
+	content: " ";
+}
+.new-timeline li .new-timeline-panel.noarrow:before, .new-timeline li .new-timeline-panel.noarrow:after {
+	top:0;
+	right:0;
+	display: none;
+	border: 0;
+}
+
+.new-timeline li.new-timeline-inverted .new-timeline-panel {
+	float: right;
+}
+
+.new-timeline li.new-timeline-inverted .new-timeline-panel:before {
+	border-left-width: 0;
+	border-right-width: 15px;
+	left: -15px;
+	right: auto;
+}
+
+.new-timeline li.new-timeline-inverted .new-timeline-panel:after {
+	border-left-width: 0;
+	border-right-width: 14px;
+	left: -14px;
+	right: auto;
+}
+
+/** the icon **/
+
+.new-timeline li .tl-circ {
+		position: absolute;
+		top: 22px;
+		left: 50%;
+		text-align: center;
+		width: 45px;
+		height: 45px;
+		margin-left: -19px;
+		z-index: 99999;
+}
+
+/** media queries **/
+@media (max-width: 991px) and (min-width: 768px) {
+	.banner ul#menu-header.nav{
+		width:inherit;
+		padding-top:20px;
+	}
+}
+
+@media (max-width: 991px) {
+	.new-timeline li .new-timeline-panel {
+		width: 44%;
+	}
+}
+
+@media (max-width: 700px) {
+	.new-timeline li {
+	clear: both;
+	}
+
+	ul.new-timeline:before {
+		left: 40px;
+	}
+
+	.tldate { width: 140px; }
+
+	ul.new-timeline li .new-timeline-panel {
+		width: calc(100% - 90px);
+		width: -moz-calc(100% - 90px);
+		width: -webkit-calc(100% - 90px);
+	}
+
+	ul.new-timeline li .tl-circ {
+		top: 22px;
+		left: 22px;
+		margin-left: 0;
+	}
+
+	ul.new-timeline > li > .tldate {
+		margin: 0;
+	}
+
+	ul.new-timeline > li > .new-timeline-panel {
+		float: right;
+	}
+
+	ul.new-timeline > li > .new-timeline-panel:before {
+		border-left-width: 0;
+		border-right-width: 15px;
+		left: -15px;
+		right: auto;
+	}
+
+	ul.new-timeline > li > .new-timeline-panel:after {
+		border-left-width: 0;
+		border-right-width: 14px;
+		left: -14px;
+		right: auto;
+	}
+}
+
+
+
+/*---- Version Pages ---- */
+h3.row-center-title {
+	font-weight: 100;
+	font-size: 35px;
+	text-align: center;
+	margin-bottom: -20px;
+}
+
+a.install-8-btn {
+	display: block;
+	width: 300px;
+	margin: 15px auto;
+	line-height: 2;
+}
+
+div.headerrow h2 {
+	font-weight: 100;
+	font-size: 35px;
+	margin-top:5px;
+}
+
+div.evnt-btn-wrap {
+	text-align: center;
+}
+
+
+/** promote page **/
+
+.promote-buttons a {
+	margin-bottom: 10px;
+	width: 250px;
+}
+
+/** Get Started/install Page **/
+
+@media (max-width: 1199px) {
+	.home #getapps .client-install {
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 767px) {
+	.home #getapps .client-install, .home #getapps .btn-group, .home #getapps h2 {
+		margin-top: 0;
+	}
+
+	a.home-ent-button {
+		display: block;
+		width: 290px;
+		margin: 10px auto 0 auto !important;
+	}
+
+	div#getapps div.install-buttons {
+		margin-bottom: 40px;
+	}
+}
+
+@media (max-width: 562px) {
+	.home #getapps .client-install {
+		margin-top: 10px;
+	}
+}
+
+.mobileclientbuttons {
+	margin-top: 15px;
+}
+
+div#getapps h2{
+	text-align: center;
+	font-weight:200;
+	font-size:30px;
+}
+
+div#getapps .row {
+	margin-top: 30px;
+	margin-bottom: 47px;
+	text-align: center;
+}
+
+div .vmlist {
+	margin-top: 5px !important;
+	margin-bottom: 5px !important;
+}
+
+div#getapps p {
+	margin-bottom: 20px;
+	margin-top: -20px;
+}
+
+#appstore, #googleplay, #desktopclient {
+opacity: 0.9;
+}
+
+img#sync-button {
+	vertical-align: text-bottom;
+}
+
+div.numbadge {
+	border-radius: 50%;
+	width: 53px;
+	height: 53px;
+	color: white;
+	background: #0082C9;
+	text-align: center;
+	padding-top: 6px;
+	font-size: 21px;
+	border: 4px solid white;
+}
+
+div.numbadge.centre {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body.install h3 {
+	font-weight: 600;
+}
+
+body.install h4 {
+	margin-top: 30px;
+}
+body.install hr {
+	border-bottom: 1px dotted #0082C9;
+}
+
+body.install hr.narrow, body.install hr.wide {
+	display: none;
+	margin-bottom: -43px;
+}
+
+body.install hr.narrow {
+	margin-bottom: -27px;
+}
+
+body.install div.col-md-3 {
+	margin-bottom: 45px;
+}
+
+body.install div.PopupGetStarted {
+		height: auto;
+		margin: 0 auto;
+/*		 color: #0082C9; no need to repeat that here */
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1000;
+		display: none;
+}
+
+body.install div.PopupGetStarted div.row{
+		margin: 0;
+}
+
+body.install div.PopupGetStarted div.instructions{
+		background: white !important; /* I seem to have to enforce this, comes from main.min.css*/
+		margin-top: 70px !important;
+		padding: 10px;
+		border-radius: 4px;
+}
+
+body.install a.mask {
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(29, 45, 68, 0.5);
+		z-index: 500;
+		display: none;
+}
+
+body.install .overlay-header {
+	background-color: rgba(240,240,240,.9);
+	border-radius: 4px;
+}
+
+body.install .overlay-header h3 {
+		margin-left: 15px;
+}
+
+body.install .overlay-header a.close {
+		margin-right: 15px;
+}
+
+body.install .overlay-body {
+		padding-top: 10px;
+}
+
+body.install .overlay-footer {
+	background-color: rgba(240,240,240,.9);
+	border-radius: 4px;
+}
+
+body.install .overlay-footer a.btn {
+		float: right;
+		margin-right: 15px;
+}
+
+body.install .overlay-footer p {
+		margin-bottom: 0px;
+}
+
+body.install div.PopupGetStarted:target, body.install div.PopupGetStarted:target+a.mask{
+		display: block;
+		opacity: 1;
+}
+
+body.install .label-blue {
+	background-color: #0082C9;
+}
+
+body.install .close {
+	color: #575858;
+		font-size: 1.75em;
+		opacity: 0.8;
+}
+
+body.install .close:hover, body.install .close:focus {
+		opacity: 1;
+}
+
+body.install a.btn-lg {
+		font-size: 16px;
+}
+
+body.install .installers ul.tabs {
+	padding: 5px 0 0 5px;
+}
+
+body.install .installers ul.tabs li {
+	float: left;
+	list-style: none;
+	margin-left: 5px;
+	padding-left: 0;
+}
+
+body.install .overlay-header, .overlay-footer {
+	padding: 8px;
+}
+
+body.install #tab-archive .btn {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+body.install .downloadbutton {
+	text-align: center;
+	position: relative;
+}
+
+body.install .downloadbutton .btn {
+	padding: 20px;
+	font-size: 22px;
+}
+
+body.install .nav-tabs {
+	border-bottom: 0px;
+	border-top: 1px solid #ddd;
+}
+
+body.install  .nav-tabs > li {
+	margin-bottom: 0px;
+	margin-top:-1px;
+	margin-left: 0px;
+}
+
+body.install .nav-tabs > li > a {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	line-height: 20px;
+}
+
+body.install .nav-tabs > .active {
+/* 	background-color: #eeeeee; */
+}
+
+body.install .nav-tabs > .active > a, .nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+	color: #555555;
+	cursor: default;
+	background-color: #ffffff;
+	border-top-color: transparent !important;
+	border-bottom-color: #ddd;
+	border-left-color: #ddd;
+	border-right-color: #ddd;
+	-moz-border-radius:0px;
+	-webkit-border-radius:0px;
+	border-radius:0px;
+	-moz-border-radius-bottomright: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+
+@media(min-width: 996px) {
+	body.install hr.wide {
+		display: block;
+	}
+}
+@media(max-width: 996px) {
+	body.install hr.narrow {
+		display: block;
+		margin-top: 50px;
+	}
+}
+
+/* Consulting page */
+
+.consulting .consultingname {
+	height: 30px;
+}
+
+.consulting .consultant-logo {
+	padding: 15px;
+	margin: auto;
+	width: 80%;
+}
+
+img.desaturate {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.consulting .bannerhead {
+	text-align: center;
+}
+
+.consulting .flag {
+	margin: auto;
+	padding: 0px 5px;
+}
+
+.consulting .consultant-logo-partner {
+	padding: 15px;
+	margin: auto;
+	width: 100%;
+}
+
+.consulting .bannerfoot {
+	height: 180px;
+}
+
+/* Provider page */
+
+.prov-thumbnail {
+/* 	line-height: 1; */
+/*		 background-color: #fff; */
+		border: 1px solid #eee;
+		border-radius: 4px;
+		-webkit-transition: all .2s ease-in-out;
+		transition: all .2s ease-in-out;
+		display: inline-block;
+		max-width: 100%;
+/*		 height: auto; */
+/*		 display: block; */
+		margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 5px;
+}
+
+.provider .providername {
+	height: 30px;
+}
+
+.provider .provider-logo {
+	padding: 2px;
+	margin: auto;
+	width: 95%;
+}
+
+.provider .bannerhead {
+	height: 110px;
+	text-align: center;
+	background-color: white !important;
+	border-bottom: none !important;
+	margin-bottom: 5px;
+}
+
+.provider .flag {
+	margin: auto;
+	padding: 2px 5px;
+}
+
+.provider .bannerfoot {
+	height: 130px;
+	background-color: white !important;
+	border: none !important;
+}
+
+
+/* Box page */
+
+.buybutton {
+	padding: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+}
+
+/* ownCloud.org/features features page*/
+
+/* Full width background image */
+
+.featurerow {
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+
+.webrtcspreedbox {
+	width: 100%;
+	height: 100%;
+	min-height: 700px;
+	opacity: 1;
+	visibility: inherit;
+	background-image: url("../../img/spreedbox/spreedbox_banner.png");
+	background-color: rgba(0, 0, 0, 0);
+	background-size: cover;
+	background-position: center top;
+	background-repeat: no-repeat;
+/* 	color: white; */
+}
+
+.spreedfeatures {
+	padding-top: 50px;
+}
+
+.spreedfeatureswidth {
+	padding-right: 0px !important;
+}
+
+@media (max-width: 767px) {
+	.webrtcspreedbox {
+	background-position: 49% top;
+	}
+	.spreedfeatures {
+	padding: 2% 0% 0% 33%;
+/* 	padding-top: 10%; */
+/* 	padding-left: 23%; */
+	width: 100%;
+	color: black;
+	}
+}
+
+@media (max-width: 600px) {
+	.webrtcspreedbox {
+	background-position: 47% top;
+	}
+	.spreedfeatures {
+	padding: 2% 0% 0% 12%;
+	width: 100%;
+	text-shadow: 0px 0px 4px white;
+	font-weight: bold;
+	color: black;
+	}
+	.spreedfeatures .morebutton {
+	text-shadow: none;
+	}
+}
+
+
+.ft-image-bg {
+	 background-attachment: scroll;
+	 background-repeat: none;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 background-size: cover;
+	 -o-background-size: cover;
+/*		border: 0px; */
+/* 	min-height: 450px; background-position: 35% 40%; */
+	position: relative;
+	margin-left: 0px !important;
+	margin-right: 0px !important;
+	margin: 0 0 0 0 !important;
+}
+
+/*.ft-img-center {
+	margin: 0 auto;
+}*/
+
+.featuregroup {
+	width: 80%;
+}
+
+.featuregroup .featuretitle {
+text-align: center;
+}
+
+.featureblock .icon {
+	font-size: 60px;
+	display: block;
+	color: #0082c9;
+	text-align: center;
+	padding-top: 20%;
+}
+
+@media (max-width: 991px) {
+	.featuregroup {
+		text-align: center;
+	}
+
+
+}
+
+.morebuttondiv {
+	margin: 20px auto 40px auto;
+}
+
+.morebutton .icon {
+	font-size: 20px;
+	display: inline;
+	color: white;
+	text-align: center;
+	padding-left: 5px;
+}
+
+.morebutton {
+	margin: 0 auto;
+	font-size: 20px;
+	padding: 10px 20px 10px 20px;
+}
+
+.morebuttonyoutube {
+	font-size: 30px;
+}
+
+.morebuttonyoutube .icon {
+	font-size: 45px;
+	line-height: 30px;
+}
+
+.ft-sharing {
+}
+
+.ft-sharing-img {
+	padding-top: 0%
+}
+
+.ft-everywhere-txt {
+	/*text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);*/
+	color: white;
+	position: relative;
+	padding-top: 100px;
+}
+
+.ft-everywhere-img {
+	height: 75%;
+	margin: 0 0 0 0 !important;
+	position: absolute;
+	bottom:0;
+}
+
+.ft-access {
+/* 	padding-top: 30px; */
+}
+
+@media (max-width: 991px) {
+	.ft-everywhere-img {
+		height: auto;
+		width: 25%;
+	}
+}
+
+@media (max-width: 767px) {
+	.ft-everywhere-img {
+	/* 	height: auto; */
+		width: 20%;
+		right: 5%;
+	}
+	.ft-everywhere-txt {
+		padding-right: 30%;
+		padding-left: 5%;
+		float: left;
+	}
+	.ft-sharing-img {
+		padding-top: 2%
+	}
+
+}
+/* go-to-top button */
+
+.back-to-top {
+	z-index: 100;
+	margin: 0;
+	background: none;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	position: fixed;
+	bottom: 40px;
+	right: 10px;
+	color: #0082c9;
+	text-decoration: none;
+	/* image replacement properties */
+/* 	overflow: hidden; */
+/* 	text-indent: 100%; */
+	white-space: nowrap;
+	visibility: hidden;
+	opacity: 0;
+	-webkit-transition: opacity .3s 0s, visibility 0s .3s;
+	-moz-transition: opacity .3s 0s, visibility 0s .3s;
+	transition: opacity .3s 0s, visibility 0s .3s;
+	text-decoration: none !important;
+}
+
+.back-to-top i {
+	font-size: 60px;
+	text-decoration: none;
+}
+
+.back-to-top.cd-is-visible, .back-to-top.cd-fade-out, .no-touch .back-to-top:hover {
+	-webkit-transition: opacity .3s 0s, visibility 0s 0s;
+	-moz-transition: opacity .3s 0s, visibility 0s 0s;
+	transition: opacity .3s 0s, visibility 0s 0s;
+	text-decoration: none;
+
+}
+.back-to-top.cd-is-visible {
+	/* the button becomes visible */
+	visibility: visible;
+	opacity: 1;
+	text-decoration: none;
+}
+.back-to-top.cd-fade-out {
+	/* if the user keeps scrolling down, the button is out of focus and becomes less visible */
+	opacity: .5;
+	text-decoration: none;
+
+}
+.no-touch .back-to-top:hover {
+	opacity: 1;
+	text-decoration: none;
+}
+@media only screen and (min-width: 1024px) {
+	.back-to-top {
+		height: 60px;
+		width: 60px;
+		right: 30px;
+		bottom: 30px;
+		text-decoration: none;
+	}
+
+	#menu-header {
+		display: block;
+	}
+}
+
+/* YouTube image overlay (to not let YT videos slow down page loading but - look must be same) */
+
+.yt-img-overlay {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	overflow: hidden;
+	display: block;
+	max-width: 90%;
+	height: auto;
+/* 	margin: 1%; */
+/* 	margin-top: 3%; */
+	text-decoration: none;
+	color: white;
+}
+
+.col-md-4.yt-img-overlay {  /* compensate for the 1% margin yt images need */
+/* 	width: 31%; */
+}
+
+.col-md-3.yt-img-overlay {  /* compensate for the 1% margin yt images need */
+/* 	width: 22.8%; */
+}
+
+.yt-img-overlay img {
+			width: 100%;
+			height: auto;
+/* 			max-height: 100%; */
+/* 			margin: -5% 0 -5% 0; */
+}
+
+.yt-play-btn {
+	padding-left: 40%;
+	padding-top: 20%;
+/* 	padding-top: 20%; */
+	position: absolute;
+	top: 0;
+/* 	top: -5%; */
+/* 	left: -5% */
+/* 	padding-left: 45%; */
+	width: 100%;
+	height: 100%;
+}
+
+.yt-play-btn i {
+/* 	left: 5% */
+	 background-image: url(../../img/common/YTplay.svg);
+	 background-position: center;
+	 background-repeat: none;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 background-size: cover;
+	 -o-background-size: cover;
+	 background-clip: border-box;
+	 border: 0px;
+/*		min-height: 10px !important; */
+	 z-index: 0 !important;
+	 width: 68px;
+	 height: 50px;
+	 display: inline-block;
+}
+
+.yt-play-btn:hover i{
+	 background-image: url(../../img/common/YTplayHover.svg);
+	 transition: background-image 0.1s;
+	 -webkit-transition: background-image 0.1s;
+/*	width: 100%;
+	height: 100%;*/
+}
+
+.YouTubeDialog {
+	width: 50% !important;
+	height: 50% !important;
+	padding: 5px;
+}
+
+.YouTubeDialog .ui-dialog-content {
+	height: 100% !important;
+}
+
+.yt-row {  /* correction for row with yt images */
+/* 	margin-left: 15% !important; */
+}
+
+@media (max-width: 991px) {
+	.YouTubeDialog {
+		width: 100% !important;
+		height: 40% !important;
+/* 		padding: 5px; */
+	}
+	.yt-row {
+	margin-left: 0% !important;
+	}
+	.col-md-4.yt-img-overlay {  /* compensate for the 1% margin yt images need */
+		width: 97%;
+	}
+
+	.col-md-3.yt-img-overlay {  /* compensate for the 1% margin yt images need */
+		width: 97%;
+	}
+}
+
+
+/* team page */
+/* devices page */
+.device-img {
+	margin-left: auto !important;
+    margin-right: auto !important;
+	max-height: 300px;
+}
+
+/* Nextcloud Box page */
+.boxinfo {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+/* PR pages */
+
+.pr {
+	font-size: 18px;
+}
+
+
+/*Cookie Consent Begin*/
+#cookieConsent {
+    background-color: rgba(20,20,20,0.8);
+    min-height: 26px;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 26px;
+    padding: 8px 0 8px 0px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+   display: none;
+    z-index: 9999;
+}
+#cookieConsent a {
+    color: #4B8EE7;
+    text-decoration: none;
+}
+#closeCookieConsent {
+    float: right;
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    margin: -15px 5px 5px 5px;
+	padding: 5px;
+    font-weight: bold;
+    font-size: 28px;
+}
+#closeCookieConsent:hover {
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+	#closeCookieConsent {
+	display: none;
+	}
+}
+#cookieConsent a.cookieConsentOK {
+    background-color: #0082c9;
+    color: white;
+    display: inline-block;
+    border-radius: 20px;
+    padding: 0 20px;
+    cursor: pointer;
+    margin: 0 0px 0 10px;
+}
+#cookieConsent a.cookieConsentOK:hover {
+    background-color: #286090;
+}
+/*Cookie Consent End*/
+
+/*All default buttons*/
+.button {
+    background: transparent;
+    position: relative;
+    text-align: center;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    padding: 0 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease 0s;
+    margin: 20px 0 20px 0; }
+
+.button:hover {
+    text-decoration: none;
+    color: #0082c9;
+    background-color: white;
+    border: solid 1px #0082c9; }
+
+.button--dropdown {
+    padding: 0;
+    position: absolute; }
+
+.button--dropdown:before {
+    content: "";
+    background: url(../../img/common/simple_arrow_down_white.svg) center/contain no-repeat;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 20px;
+    transition: all 0.2s ease-in; }
+
+.button--dropdown:hover:before {
+    background: url(../../img/common/simple_arrow_down_white.svg) center/contain no-repeat !important; }
+
+.button--dropdown.active:before {
+    transform: rotate(180deg); }
+
+.button--dropdown .dropdown-toggle {
+    font-size: 0;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    top: 0;
+    border: none;
+    padding: 0;
+    margin: 0 0 0 1px;
+    background: transparent;
+    width: 100%;
+    display: none; }
+
+.button--dropdown .dropdown-toggle:focus {
+    outline: 0;
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
+    border-width: 0 4px 5px 4px; }
+
+.button--dropdown .dropdown-text {
+    cursor: pointer;
+    z-index: 2;
+    padding: 0 50px 0 30px; }
+
+.button--dropdown .dropdown-content {
+    -webkit-transition: all .25s ease;
+    -moz-transition: all .25s ease;
+    -ms-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    list-style-type: none;
+    position: relative;
+    top: 10px;
+    padding: 15px 25px;
+    margin: 0;
+    opacity: 0;
+    border-radius: 3px;
+    line-height: 32px;
+    background-color: white;
+    border: 1px solid #f1f1f1;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.11); }
+
+.button--dropdown .dropdown-content:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #f1f1f1; }
+
+.button--dropdown .dropdown-content:after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border: 6px solid transparent;
+    border-bottom-color: white; }
+
+.button--dropdown .dropdown-content.visible {
+    opacity: 1;
+    top: 20px;
+    display: block;
+    z-index: 10; }
+
+.button--dropdown .dropdown-content a {
+    display: block;
+    text-transform: none;
+    font-size: 14px;
+    color: #a0a0a0;
+    font-weight: 400;
+    line-height: 2.14; }
+
+.button--dropdown .dropdown-content a:hover {
+    text-decoration: none;
+    color: #333333; }
+
+.button--dropdown .dropdown-content:hover {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2; }
+
+.button--large {
+    height: 60px;
+    line-height: 60px;
+    min-width: 200px; }
+
+.button--small {
+    height: 40px;
+    line-height: 40px; }
+
+.button--blue {
+    background-color: #0082c9;
+    border: 1px solid transparent; }
+
+.button--blue:hover {
+    /*background-color: $nextcloud-blue;
+        *      color: white;*/ }
+        *
+        *
+.button--blue.button--dropdown:hover:before {
+    background: url(../../img/common/simple_arrow_down_white.svg) center/contain no-repeat; }
+
+.button--arrow {
+    padding-right: 50px; }
+
+.button--arrow:before {
+    content: "";
+    background: url(../../img/common/arrow_right.svg) center/contain no-repeat;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 25px;
+    transition: all 0.3s ease 0s; }
+
+.button--arrow:hover:before {
+    background: url(../../img/common/arrow_right_blue.svg) center/contain no-repeat;
+    right: 15px; }
+
+/*.button--arrow.button--blue:hover {
+    background-color: #0073B2;
+    border: 1px solid #0073B2;
+    color: white; }*/
+
+.button--arrow.button--blue:before {
+    background: url(../../img/common/arrow_right.svg) center/contain no-repeat; }
+
+.button--arrow.button--blue:hover:before {
+    background: url(../../img/common/arrow_right_blue.svg) center/contain no-repeat; }
+
+.button--arrow--down {
+    padding-right: 50px; }
+
+.button--arrow--down:before {
+    content: "";
+    background: url(../../img/common/arrow_down_white.svg) center/contain no-repeat;
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 100%;
+    top: 0;
+    right: 25px;
+    transition: all 0.3s ease 0s; }
+
+.button--arrow--down:hover:before {
+    background: url(../../img/common/arrow_down_blue.svg) center/contain no-repeat;
+    right: 15px; }
+
+.button--arrow--down.button--blue:hover {
+    background-color: #0073B2;
+    border: 1px solid #0073B2;
+    color: white; }
+
+.button--arrow--down.button--blue:before {
+    background: url(../../img/common/arrow_down_white.svg) center/contain no-repeat; }
+
+.button--arrow--down.button--blue:hover:before {
+    background: url(../../img/common/arrow_down_blue.svg) center/contain no-repeat; }
+
+.button--icon {
+    padding: 0 30px 0 50px; }
+
+.button--icon:after {
+content: "";
+background: url(../../img/common/pdf-icon.svg) center/contain no-repeat;
+position: absolute;
+display: block;
+width: 24px;
+height: 100%;
+top: 0;
+left: 20px;
+transition: all 0.3s ease 0s; }
+.flag-icon-background {
+background-size: contain;
+background-position: 50%;
+background-repeat: no-repeat; }
+
+.flag-icon {
+background-size: contain;
+background-position: 50%;
+background-repeat: no-repeat;
+position: relative;
+display: inline-block;
+width: 1.33333333em;
+line-height: 1em; }
+
+.flag-icon:before {
+content: "\00a0"; }
+
+.flag-icon.flag-icon-squared {
+width: 1em; }
+
+.flag-icon-ad {
+background-image: url(../../img/flags/4x3/ad.svg); }
+
+.flag-icon-ad.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ad.svg); }
+
+.flag-icon-ae {
+background-image: url(../../img/flags/4x3/ae.svg); }
+
+.flag-icon-ae.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ae.svg); }
+
+.flag-icon-af {
+background-image: url(../../img/flags/4x3/af.svg); }
+
+.flag-icon-af.flag-icon-squared {
+background-image: url(../../img/flags/1x1/af.svg); }
+
+.flag-icon-ag {
+background-image: url(../../img/flags/4x3/ag.svg); }
+
+.flag-icon-ag.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ag.svg); }
+
+.flag-icon-ai {
+background-image: url(../../img/flags/4x3/ai.svg); }
+
+.flag-icon-ai.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ai.svg); }
+
+.flag-icon-al {
+background-image: url(../../img/flags/4x3/al.svg); }
+
+.flag-icon-al.flag-icon-squared {
+background-image: url(../../img/flags/1x1/al.svg); }
+
+.flag-icon-am {
+background-image: url(../../img/flags/4x3/am.svg); }
+
+.flag-icon-am.flag-icon-squared {
+background-image: url(../../img/flags/1x1/am.svg); }
+
+.flag-icon-ao {
+background-image: url(../../img/flags/4x3/ao.svg); }
+
+.flag-icon-ao.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ao.svg); }
+
+.flag-icon-aq {
+background-image: url(../../img/flags/4x3/aq.svg); }
+
+.flag-icon-aq.flag-icon-squared {
+background-image: url(../../img/flags/1x1/aq.svg); }
+
+.flag-icon-ar {
+background-image: url(../../img/flags/4x3/ar.svg); }
+
+.flag-icon-ar.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ar.svg); }
+
+.flag-icon-as {
+background-image: url(../../img/flags/4x3/as.svg); }
+
+.flag-icon-as.flag-icon-squared {
+background-image: url(../../img/flags/1x1/as.svg); }
+
+.flag-icon-at {
+background-image: url(../../img/flags/4x3/at.svg); }
+
+.flag-icon-at.flag-icon-squared {
+background-image: url(../../img/flags/1x1/at.svg); }
+
+.flag-icon-au {
+background-image: url(../../img/flags/4x3/au.svg); }
+
+.flag-icon-au.flag-icon-squared {
+background-image: url(../../img/flags/1x1/au.svg); }
+
+.flag-icon-aw {
+background-image: url(../../img/flags/4x3/aw.svg); }
+
+.flag-icon-aw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/aw.svg); }
+
+.flag-icon-ax {
+background-image: url(../../img/flags/4x3/ax.svg); }
+
+.flag-icon-ax.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ax.svg); }
+
+.flag-icon-az {
+background-image: url(../../img/flags/4x3/az.svg); }
+
+.flag-icon-az.flag-icon-squared {
+background-image: url(../../img/flags/1x1/az.svg); }
+
+.flag-icon-ba {
+background-image: url(../../img/flags/4x3/ba.svg); }
+
+.flag-icon-ba.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ba.svg); }
+
+.flag-icon-bb {
+background-image: url(../../img/flags/4x3/bb.svg); }
+
+.flag-icon-bb.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bb.svg); }
+
+.flag-icon-bd {
+background-image: url(../../img/flags/4x3/bd.svg); }
+
+.flag-icon-bd.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bd.svg); }
+
+.flag-icon-be {
+background-image: url(../../img/flags/4x3/be.svg); }
+
+.flag-icon-be.flag-icon-squared {
+background-image: url(../../img/flags/1x1/be.svg); }
+
+.flag-icon-bf {
+background-image: url(../../img/flags/4x3/bf.svg); }
+
+.flag-icon-bf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bf.svg); }
+
+.flag-icon-bg {
+background-image: url(../../img/flags/4x3/bg.svg); }
+
+.flag-icon-bg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bg.svg); }
+
+.flag-icon-bh {
+background-image: url(../../img/flags/4x3/bh.svg); }
+
+.flag-icon-bh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bh.svg); }
+
+.flag-icon-bi {
+background-image: url(../../img/flags/4x3/bi.svg); }
+
+.flag-icon-bi.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bi.svg); }
+
+.flag-icon-bj {
+background-image: url(../../img/flags/4x3/bj.svg); }
+
+.flag-icon-bj.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bj.svg); }
+
+.flag-icon-bl {
+background-image: url(../../img/flags/4x3/bl.svg); }
+
+.flag-icon-bl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bl.svg); }
+
+.flag-icon-bm {
+background-image: url(../../img/flags/4x3/bm.svg); }
+
+.flag-icon-bm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bm.svg); }
+
+.flag-icon-bn {
+background-image: url(../../img/flags/4x3/bn.svg); }
+
+.flag-icon-bn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bn.svg); }
+
+.flag-icon-bo {
+background-image: url(../../img/flags/4x3/bo.svg); }
+
+.flag-icon-bo.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bo.svg); }
+
+.flag-icon-bq {
+background-image: url(../../img/flags/4x3/bq.svg); }
+
+.flag-icon-bq.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bq.svg); }
+
+.flag-icon-br {
+background-image: url(../../img/flags/4x3/br.svg); }
+
+.flag-icon-br.flag-icon-squared {
+background-image: url(../../img/flags/1x1/br.svg); }
+
+.flag-icon-bs {
+background-image: url(../../img/flags/4x3/bs.svg); }
+
+.flag-icon-bs.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bs.svg); }
+
+.flag-icon-bt {
+background-image: url(../../img/flags/4x3/bt.svg); }
+
+.flag-icon-bt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bt.svg); }
+
+.flag-icon-bv {
+background-image: url(../../img/flags/4x3/bv.svg); }
+
+.flag-icon-bv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bv.svg); }
+
+.flag-icon-bw {
+background-image: url(../../img/flags/4x3/bw.svg); }
+
+.flag-icon-bw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bw.svg); }
+
+.flag-icon-by {
+background-image: url(../../img/flags/4x3/by.svg); }
+
+.flag-icon-by.flag-icon-squared {
+background-image: url(../../img/flags/1x1/by.svg); }
+
+.flag-icon-bz {
+background-image: url(../../img/flags/4x3/bz.svg); }
+
+.flag-icon-bz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/bz.svg); }
+
+.flag-icon-ca {
+background-image: url(../../img/flags/4x3/ca.svg); }
+
+.flag-icon-ca.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ca.svg); }
+
+.flag-icon-cc {
+background-image: url(../../img/flags/4x3/cc.svg); }
+
+.flag-icon-cc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cc.svg); }
+
+.flag-icon-cd {
+background-image: url(../../img/flags/4x3/cd.svg); }
+
+.flag-icon-cd.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cd.svg); }
+
+.flag-icon-cf {
+background-image: url(../../img/flags/4x3/cf.svg); }
+
+.flag-icon-cf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cf.svg); }
+
+.flag-icon-cg {
+background-image: url(../../img/flags/4x3/cg.svg); }
+
+.flag-icon-cg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cg.svg); }
+
+.flag-icon-ch {
+background-image: url(../../img/flags/4x3/ch.svg); }
+
+.flag-icon-ch.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ch.svg); }
+
+.flag-icon-ci {
+background-image: url(../../img/flags/4x3/ci.svg); }
+
+.flag-icon-ci.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ci.svg); }
+
+.flag-icon-ck {
+background-image: url(../../img/flags/4x3/ck.svg); }
+
+.flag-icon-ck.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ck.svg); }
+
+.flag-icon-cl {
+background-image: url(../../img/flags/4x3/cl.svg); }
+
+.flag-icon-cl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cl.svg); }
+
+.flag-icon-cm {
+background-image: url(../../img/flags/4x3/cm.svg); }
+
+.flag-icon-cm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cm.svg); }
+
+.flag-icon-cn {
+background-image: url(../../img/flags/4x3/cn.svg); }
+
+.flag-icon-cn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cn.svg); }
+
+.flag-icon-co {
+background-image: url(../../img/flags/4x3/co.svg); }
+
+.flag-icon-co.flag-icon-squared {
+background-image: url(../../img/flags/1x1/co.svg); }
+
+.flag-icon-cr {
+background-image: url(../../img/flags/4x3/cr.svg); }
+
+.flag-icon-cr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cr.svg); }
+
+.flag-icon-cu {
+background-image: url(../../img/flags/4x3/cu.svg); }
+
+.flag-icon-cu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cu.svg); }
+
+.flag-icon-cv {
+background-image: url(../../img/flags/4x3/cv.svg); }
+
+.flag-icon-cv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cv.svg); }
+
+.flag-icon-cw {
+background-image: url(../../img/flags/4x3/cw.svg); }
+
+.flag-icon-cw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cw.svg); }
+
+.flag-icon-cx {
+background-image: url(../../img/flags/4x3/cx.svg); }
+
+.flag-icon-cx.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cx.svg); }
+
+.flag-icon-cy {
+background-image: url(../../img/flags/4x3/cy.svg); }
+
+.flag-icon-cy.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cy.svg); }
+
+.flag-icon-cz {
+background-image: url(../../img/flags/4x3/cz.svg); }
+
+.flag-icon-cz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/cz.svg); }
+
+.flag-icon-de {
+background-image: url(../../img/flags/4x3/de.svg); }
+
+.flag-icon-de.flag-icon-squared {
+background-image: url(../../img/flags/1x1/de.svg); }
+
+.flag-icon-dj {
+background-image: url(../../img/flags/4x3/dj.svg); }
+
+.flag-icon-dj.flag-icon-squared {
+background-image: url(../../img/flags/1x1/dj.svg); }
+
+.flag-icon-dk {
+background-image: url(../../img/flags/4x3/dk.svg); }
+
+.flag-icon-dk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/dk.svg); }
+
+.flag-icon-dm {
+background-image: url(../../img/flags/4x3/dm.svg); }
+
+.flag-icon-dm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/dm.svg); }
+
+.flag-icon-do {
+background-image: url(../../img/flags/4x3/do.svg); }
+
+.flag-icon-do.flag-icon-squared {
+background-image: url(../../img/flags/1x1/do.svg); }
+
+.flag-icon-dz {
+background-image: url(../../img/flags/4x3/dz.svg); }
+
+.flag-icon-dz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/dz.svg); }
+
+.flag-icon-ec {
+background-image: url(../../img/flags/4x3/ec.svg); }
+
+.flag-icon-ec.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ec.svg); }
+
+.flag-icon-ee {
+background-image: url(../../img/flags/4x3/ee.svg); }
+
+.flag-icon-ee.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ee.svg); }
+
+.flag-icon-eg {
+background-image: url(../../img/flags/4x3/eg.svg); }
+
+.flag-icon-eg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/eg.svg); }
+
+.flag-icon-eh {
+background-image: url(../../img/flags/4x3/eh.svg); }
+
+.flag-icon-eh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/eh.svg); }
+
+.flag-icon-er {
+background-image: url(../../img/flags/4x3/er.svg); }
+
+.flag-icon-er.flag-icon-squared {
+background-image: url(../../img/flags/1x1/er.svg); }
+
+.flag-icon-es {
+background-image: url(../../img/flags/4x3/es.svg); }
+
+.flag-icon-es.flag-icon-squared {
+background-image: url(../../img/flags/1x1/es.svg); }
+
+.flag-icon-et {
+background-image: url(../../img/flags/4x3/et.svg); }
+
+.flag-icon-et.flag-icon-squared {
+background-image: url(../../img/flags/1x1/et.svg); }
+
+.flag-icon-fi {
+background-image: url(../../img/flags/4x3/fi.svg); }
+
+.flag-icon-fi.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fi.svg); }
+
+.flag-icon-fj {
+background-image: url(../../img/flags/4x3/fj.svg); }
+
+.flag-icon-fj.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fj.svg); }
+
+.flag-icon-fk {
+background-image: url(../../img/flags/4x3/fk.svg); }
+
+.flag-icon-fk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fk.svg); }
+
+.flag-icon-fm {
+background-image: url(../../img/flags/4x3/fm.svg); }
+
+.flag-icon-fm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fm.svg); }
+
+.flag-icon-fo {
+background-image: url(../../img/flags/4x3/fo.svg); }
+
+.flag-icon-fo.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fo.svg); }
+
+.flag-icon-fr {
+background-image: url(../../img/flags/4x3/fr.svg); }
+
+.flag-icon-fr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/fr.svg); }
+
+.flag-icon-ga {
+background-image: url(../../img/flags/4x3/ga.svg); }
+
+.flag-icon-ga.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ga.svg); }
+
+.flag-icon-gb {
+background-image: url(../../img/flags/4x3/gb.svg); }
+
+.flag-icon-gb.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gb.svg); }
+
+.flag-icon-gd {
+background-image: url(../../img/flags/4x3/gd.svg); }
+
+.flag-icon-gd.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gd.svg); }
+
+.flag-icon-ge {
+background-image: url(../../img/flags/4x3/ge.svg); }
+
+.flag-icon-ge.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ge.svg); }
+
+.flag-icon-gf {
+background-image: url(../../img/flags/4x3/gf.svg); }
+
+.flag-icon-gf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gf.svg); }
+
+.flag-icon-gg {
+background-image: url(../../img/flags/4x3/gg.svg); }
+
+.flag-icon-gg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gg.svg); }
+
+.flag-icon-gh {
+background-image: url(../../img/flags/4x3/gh.svg); }
+
+.flag-icon-gh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gh.svg); }
+
+.flag-icon-gi {
+background-image: url(../../img/flags/4x3/gi.svg); }
+
+.flag-icon-gi.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gi.svg); }
+
+.flag-icon-gl {
+background-image: url(../../img/flags/4x3/gl.svg); }
+
+.flag-icon-gl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gl.svg); }
+
+.flag-icon-gm {
+background-image: url(../../img/flags/4x3/gm.svg); }
+
+.flag-icon-gm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gm.svg); }
+
+.flag-icon-gn {
+background-image: url(../../img/flags/4x3/gn.svg); }
+
+.flag-icon-gn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gn.svg); }
+
+.flag-icon-gp {
+background-image: url(../../img/flags/4x3/gp.svg); }
+
+.flag-icon-gp.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gp.svg); }
+
+.flag-icon-gq {
+background-image: url(../../img/flags/4x3/gq.svg); }
+
+.flag-icon-gq.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gq.svg); }
+
+.flag-icon-gr {
+background-image: url(../../img/flags/4x3/gr.svg); }
+
+.flag-icon-gr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gr.svg); }
+
+.flag-icon-gs {
+background-image: url(../../img/flags/4x3/gs.svg); }
+
+.flag-icon-gs.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gs.svg); }
+
+.flag-icon-gt {
+background-image: url(../../img/flags/4x3/gt.svg); }
+
+.flag-icon-gt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gt.svg); }
+
+.flag-icon-gu {
+background-image: url(../../img/flags/4x3/gu.svg); }
+
+.flag-icon-gu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gu.svg); }
+
+.flag-icon-gw {
+background-image: url(../../img/flags/4x3/gw.svg); }
+
+.flag-icon-gw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gw.svg); }
+
+.flag-icon-gy {
+background-image: url(../../img/flags/4x3/gy.svg); }
+
+.flag-icon-gy.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gy.svg); }
+
+.flag-icon-hk {
+background-image: url(../../img/flags/4x3/hk.svg); }
+
+.flag-icon-hk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/hk.svg); }
+
+.flag-icon-hm {
+background-image: url(../../img/flags/4x3/hm.svg); }
+
+.flag-icon-hm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/hm.svg); }
+
+.flag-icon-hn {
+background-image: url(../../img/flags/4x3/hn.svg); }
+
+.flag-icon-hn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/hn.svg); }
+
+.flag-icon-hr {
+background-image: url(../../img/flags/4x3/hr.svg); }
+
+.flag-icon-hr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/hr.svg); }
+
+.flag-icon-ht {
+background-image: url(../../img/flags/4x3/ht.svg); }
+
+.flag-icon-ht.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ht.svg); }
+
+.flag-icon-hu {
+background-image: url(../../img/flags/4x3/hu.svg); }
+
+.flag-icon-hu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/hu.svg); }
+
+.flag-icon-id {
+background-image: url(../../img/flags/4x3/id.svg); }
+
+.flag-icon-id.flag-icon-squared {
+background-image: url(../../img/flags/1x1/id.svg); }
+
+.flag-icon-ie {
+background-image: url(../../img/flags/4x3/ie.svg); }
+
+.flag-icon-ie.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ie.svg); }
+
+.flag-icon-il {
+background-image: url(../../img/flags/4x3/il.svg); }
+
+.flag-icon-il.flag-icon-squared {
+background-image: url(../../img/flags/1x1/il.svg); }
+
+.flag-icon-im {
+background-image: url(../../img/flags/4x3/im.svg); }
+
+.flag-icon-im.flag-icon-squared {
+background-image: url(../../img/flags/1x1/im.svg); }
+
+.flag-icon-in {
+background-image: url(../../img/flags/4x3/in.svg); }
+
+.flag-icon-in.flag-icon-squared {
+background-image: url(../../img/flags/1x1/in.svg); }
+
+.flag-icon-io {
+background-image: url(../../img/flags/4x3/io.svg); }
+
+.flag-icon-io.flag-icon-squared {
+background-image: url(../../img/flags/1x1/io.svg); }
+
+.flag-icon-iq {
+background-image: url(../../img/flags/4x3/iq.svg); }
+
+.flag-icon-iq.flag-icon-squared {
+background-image: url(../../img/flags/1x1/iq.svg); }
+
+.flag-icon-ir {
+background-image: url(../../img/flags/4x3/ir.svg); }
+
+.flag-icon-ir.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ir.svg); }
+
+.flag-icon-is {
+background-image: url(../../img/flags/4x3/is.svg); }
+
+.flag-icon-is.flag-icon-squared {
+background-image: url(../../img/flags/1x1/is.svg); }
+
+.flag-icon-it {
+background-image: url(../../img/flags/4x3/it.svg); }
+
+.flag-icon-it.flag-icon-squared {
+background-image: url(../../img/flags/1x1/it.svg); }
+
+.flag-icon-je {
+background-image: url(../../img/flags/4x3/je.svg); }
+
+.flag-icon-je.flag-icon-squared {
+background-image: url(../../img/flags/1x1/je.svg); }
+
+.flag-icon-jm {
+background-image: url(../../img/flags/4x3/jm.svg); }
+
+.flag-icon-jm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/jm.svg); }
+
+.flag-icon-jo {
+background-image: url(../../img/flags/4x3/jo.svg); }
+
+.flag-icon-jo.flag-icon-squared {
+background-image: url(../../img/flags/1x1/jo.svg); }
+
+.flag-icon-jp {
+background-image: url(../../img/flags/4x3/jp.svg); }
+
+.flag-icon-jp.flag-icon-squared {
+background-image: url(../../img/flags/1x1/jp.svg); }
+
+.flag-icon-ke {
+background-image: url(../../img/flags/4x3/ke.svg); }
+
+.flag-icon-ke.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ke.svg); }
+
+.flag-icon-kg {
+background-image: url(../../img/flags/4x3/kg.svg); }
+
+.flag-icon-kg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kg.svg); }
+
+.flag-icon-kh {
+background-image: url(../../img/flags/4x3/kh.svg); }
+
+.flag-icon-kh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kh.svg); }
+
+.flag-icon-ki {
+background-image: url(../../img/flags/4x3/ki.svg); }
+
+.flag-icon-ki.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ki.svg); }
+
+.flag-icon-km {
+background-image: url(../../img/flags/4x3/km.svg); }
+
+.flag-icon-km.flag-icon-squared {
+background-image: url(../../img/flags/1x1/km.svg); }
+
+.flag-icon-kn {
+background-image: url(../../img/flags/4x3/kn.svg); }
+
+.flag-icon-kn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kn.svg); }
+
+.flag-icon-kp {
+background-image: url(../../img/flags/4x3/kp.svg); }
+
+.flag-icon-kp.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kp.svg); }
+
+.flag-icon-kr {
+background-image: url(../../img/flags/4x3/kr.svg); }
+
+.flag-icon-kr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kr.svg); }
+
+.flag-icon-kw {
+background-image: url(../../img/flags/4x3/kw.svg); }
+
+.flag-icon-kw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kw.svg); }
+
+.flag-icon-ky {
+background-image: url(../../img/flags/4x3/ky.svg); }
+
+.flag-icon-ky.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ky.svg); }
+
+.flag-icon-kz {
+background-image: url(../../img/flags/4x3/kz.svg); }
+
+.flag-icon-kz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/kz.svg); }
+
+.flag-icon-la {
+background-image: url(../../img/flags/4x3/la.svg); }
+
+.flag-icon-la.flag-icon-squared {
+background-image: url(../../img/flags/1x1/la.svg); }
+
+.flag-icon-lb {
+background-image: url(../../img/flags/4x3/lb.svg); }
+
+.flag-icon-lb.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lb.svg); }
+
+.flag-icon-lc {
+background-image: url(../../img/flags/4x3/lc.svg); }
+
+.flag-icon-lc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lc.svg); }
+
+.flag-icon-li {
+background-image: url(../../img/flags/4x3/li.svg); }
+
+.flag-icon-li.flag-icon-squared {
+background-image: url(../../img/flags/1x1/li.svg); }
+
+.flag-icon-lk {
+background-image: url(../../img/flags/4x3/lk.svg); }
+
+.flag-icon-lk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lk.svg); }
+
+.flag-icon-lr {
+background-image: url(../../img/flags/4x3/lr.svg); }
+
+.flag-icon-lr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lr.svg); }
+
+.flag-icon-ls {
+background-image: url(../../img/flags/4x3/ls.svg); }
+
+.flag-icon-ls.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ls.svg); }
+
+.flag-icon-lt {
+background-image: url(../../img/flags/4x3/lt.svg); }
+
+.flag-icon-lt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lt.svg); }
+
+.flag-icon-lu {
+background-image: url(../../img/flags/4x3/lu.svg); }
+
+.flag-icon-lu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lu.svg); }
+
+.flag-icon-lv {
+background-image: url(../../img/flags/4x3/lv.svg); }
+
+.flag-icon-lv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/lv.svg); }
+
+.flag-icon-ly {
+background-image: url(../../img/flags/4x3/ly.svg); }
+
+.flag-icon-ly.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ly.svg); }
+
+.flag-icon-ma {
+background-image: url(../../img/flags/4x3/ma.svg); }
+
+.flag-icon-ma.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ma.svg); }
+
+.flag-icon-mc {
+background-image: url(../../img/flags/4x3/mc.svg); }
+
+.flag-icon-mc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mc.svg); }
+
+.flag-icon-md {
+background-image: url(../../img/flags/4x3/md.svg); }
+
+.flag-icon-md.flag-icon-squared {
+background-image: url(../../img/flags/1x1/md.svg); }
+
+.flag-icon-me {
+background-image: url(../../img/flags/4x3/me.svg); }
+
+.flag-icon-me.flag-icon-squared {
+background-image: url(../../img/flags/1x1/me.svg); }
+
+.flag-icon-mf {
+background-image: url(../../img/flags/4x3/mf.svg); }
+
+.flag-icon-mf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mf.svg); }
+
+.flag-icon-mg {
+background-image: url(../../img/flags/4x3/mg.svg); }
+
+.flag-icon-mg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mg.svg); }
+
+.flag-icon-mh {
+background-image: url(../../img/flags/4x3/mh.svg); }
+
+.flag-icon-mh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mh.svg); }
+
+.flag-icon-mk {
+background-image: url(../../img/flags/4x3/mk.svg); }
+
+.flag-icon-mk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mk.svg); }
+
+.flag-icon-ml {
+background-image: url(../../img/flags/4x3/ml.svg); }
+
+.flag-icon-ml.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ml.svg); }
+
+.flag-icon-mm {
+background-image: url(../../img/flags/4x3/mm.svg); }
+
+.flag-icon-mm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mm.svg); }
+
+.flag-icon-mn {
+background-image: url(../../img/flags/4x3/mn.svg); }
+
+.flag-icon-mn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mn.svg); }
+
+.flag-icon-mo {
+background-image: url(../../img/flags/4x3/mo.svg); }
+
+.flag-icon-mo.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mo.svg); }
+
+.flag-icon-mp {
+background-image: url(../../img/flags/4x3/mp.svg); }
+
+.flag-icon-mp.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mp.svg); }
+
+.flag-icon-mq {
+background-image: url(../../img/flags/4x3/mq.svg); }
+
+.flag-icon-mq.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mq.svg); }
+
+.flag-icon-mr {
+background-image: url(../../img/flags/4x3/mr.svg); }
+
+.flag-icon-mr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mr.svg); }
+
+.flag-icon-ms {
+background-image: url(../../img/flags/4x3/ms.svg); }
+
+.flag-icon-ms.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ms.svg); }
+
+.flag-icon-mt {
+background-image: url(../../img/flags/4x3/mt.svg); }
+
+.flag-icon-mt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mt.svg); }
+
+.flag-icon-mu {
+background-image: url(../../img/flags/4x3/mu.svg); }
+
+.flag-icon-mu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mu.svg); }
+
+.flag-icon-mv {
+background-image: url(../../img/flags/4x3/mv.svg); }
+
+.flag-icon-mv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mv.svg); }
+
+.flag-icon-mw {
+background-image: url(../../img/flags/4x3/mw.svg); }
+
+.flag-icon-mw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mw.svg); }
+
+.flag-icon-mx {
+background-image: url(../../img/flags/4x3/mx.svg); }
+
+.flag-icon-mx.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mx.svg); }
+
+.flag-icon-my {
+background-image: url(../../img/flags/4x3/my.svg); }
+
+.flag-icon-my.flag-icon-squared {
+background-image: url(../../img/flags/1x1/my.svg); }
+
+.flag-icon-mz {
+background-image: url(../../img/flags/4x3/mz.svg); }
+
+.flag-icon-mz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/mz.svg); }
+
+.flag-icon-na {
+background-image: url(../../img/flags/4x3/na.svg); }
+
+.flag-icon-na.flag-icon-squared {
+background-image: url(../../img/flags/1x1/na.svg); }
+
+.flag-icon-nc {
+background-image: url(../../img/flags/4x3/nc.svg); }
+
+.flag-icon-nc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nc.svg); }
+
+.flag-icon-ne {
+background-image: url(../../img/flags/4x3/ne.svg); }
+
+.flag-icon-ne.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ne.svg); }
+
+.flag-icon-nf {
+background-image: url(../../img/flags/4x3/nf.svg); }
+
+.flag-icon-nf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nf.svg); }
+
+.flag-icon-ng {
+background-image: url(../../img/flags/4x3/ng.svg); }
+
+.flag-icon-ng.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ng.svg); }
+
+.flag-icon-ni {
+background-image: url(../../img/flags/4x3/ni.svg); }
+
+.flag-icon-ni.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ni.svg); }
+
+.flag-icon-nl {
+background-image: url(../../img/flags/4x3/nl.svg); }
+
+.flag-icon-nl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nl.svg); }
+
+.flag-icon-no {
+background-image: url(../../img/flags/4x3/no.svg); }
+
+.flag-icon-no.flag-icon-squared {
+background-image: url(../../img/flags/1x1/no.svg); }
+
+.flag-icon-np {
+background-image: url(../../img/flags/4x3/np.svg); }
+
+.flag-icon-np.flag-icon-squared {
+background-image: url(../../img/flags/1x1/np.svg); }
+
+.flag-icon-nr {
+background-image: url(../../img/flags/4x3/nr.svg); }
+
+.flag-icon-nr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nr.svg); }
+
+.flag-icon-nu {
+background-image: url(../../img/flags/4x3/nu.svg); }
+
+.flag-icon-nu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nu.svg); }
+
+.flag-icon-nz {
+background-image: url(../../img/flags/4x3/nz.svg); }
+
+.flag-icon-nz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/nz.svg); }
+
+.flag-icon-om {
+background-image: url(../../img/flags/4x3/om.svg); }
+
+.flag-icon-om.flag-icon-squared {
+background-image: url(../../img/flags/1x1/om.svg); }
+
+.flag-icon-pa {
+background-image: url(../../img/flags/4x3/pa.svg); }
+
+.flag-icon-pa.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pa.svg); }
+
+.flag-icon-pe {
+background-image: url(../../img/flags/4x3/pe.svg); }
+
+.flag-icon-pe.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pe.svg); }
+
+.flag-icon-pf {
+background-image: url(../../img/flags/4x3/pf.svg); }
+
+.flag-icon-pf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pf.svg); }
+
+.flag-icon-pg {
+background-image: url(../../img/flags/4x3/pg.svg); }
+
+.flag-icon-pg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pg.svg); }
+
+.flag-icon-ph {
+background-image: url(../../img/flags/4x3/ph.svg); }
+
+.flag-icon-ph.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ph.svg); }
+
+.flag-icon-pk {
+background-image: url(../../img/flags/4x3/pk.svg); }
+
+.flag-icon-pk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pk.svg); }
+
+.flag-icon-pl {
+background-image: url(../../img/flags/4x3/pl.svg); }
+
+.flag-icon-pl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pl.svg); }
+
+.flag-icon-pm {
+background-image: url(../../img/flags/4x3/pm.svg); }
+
+.flag-icon-pm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pm.svg); }
+
+.flag-icon-pn {
+background-image: url(../../img/flags/4x3/pn.svg); }
+
+.flag-icon-pn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pn.svg); }
+
+.flag-icon-pr {
+background-image: url(../../img/flags/4x3/pr.svg); }
+
+.flag-icon-pr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pr.svg); }
+
+.flag-icon-ps {
+background-image: url(../../img/flags/4x3/ps.svg); }
+
+.flag-icon-ps.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ps.svg); }
+
+.flag-icon-pt {
+background-image: url(../../img/flags/4x3/pt.svg); }
+
+.flag-icon-pt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pt.svg); }
+
+.flag-icon-pw {
+background-image: url(../../img/flags/4x3/pw.svg); }
+
+.flag-icon-pw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/pw.svg); }
+
+.flag-icon-py {
+background-image: url(../../img/flags/4x3/py.svg); }
+
+.flag-icon-py.flag-icon-squared {
+background-image: url(../../img/flags/1x1/py.svg); }
+
+.flag-icon-qa {
+background-image: url(../../img/flags/4x3/qa.svg); }
+
+.flag-icon-qa.flag-icon-squared {
+background-image: url(../../img/flags/1x1/qa.svg); }
+
+.flag-icon-re {
+background-image: url(../../img/flags/4x3/re.svg); }
+
+.flag-icon-re.flag-icon-squared {
+background-image: url(../../img/flags/1x1/re.svg); }
+
+.flag-icon-ro {
+background-image: url(../../img/flags/4x3/ro.svg); }
+
+.flag-icon-ro.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ro.svg); }
+
+.flag-icon-rs {
+background-image: url(../../img/flags/4x3/rs.svg); }
+
+.flag-icon-rs.flag-icon-squared {
+background-image: url(../../img/flags/1x1/rs.svg); }
+
+.flag-icon-ru {
+background-image: url(../../img/flags/4x3/ru.svg); }
+
+.flag-icon-ru.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ru.svg); }
+
+.flag-icon-rw {
+background-image: url(../../img/flags/4x3/rw.svg); }
+
+.flag-icon-rw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/rw.svg); }
+
+.flag-icon-sa {
+background-image: url(../../img/flags/4x3/sa.svg); }
+
+.flag-icon-sa.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sa.svg); }
+
+.flag-icon-sb {
+background-image: url(../../img/flags/4x3/sb.svg); }
+
+.flag-icon-sb.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sb.svg); }
+
+.flag-icon-sc {
+background-image: url(../../img/flags/4x3/sc.svg); }
+
+.flag-icon-sc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sc.svg); }
+
+.flag-icon-sd {
+background-image: url(../../img/flags/4x3/sd.svg); }
+
+.flag-icon-sd.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sd.svg); }
+
+.flag-icon-se {
+background-image: url(../../img/flags/4x3/se.svg); }
+
+.flag-icon-se.flag-icon-squared {
+background-image: url(../../img/flags/1x1/se.svg); }
+
+.flag-icon-sg {
+background-image: url(../../img/flags/4x3/sg.svg); }
+
+.flag-icon-sg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sg.svg); }
+
+.flag-icon-sh {
+background-image: url(../../img/flags/4x3/sh.svg); }
+
+.flag-icon-sh.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sh.svg); }
+
+.flag-icon-si {
+background-image: url(../../img/flags/4x3/si.svg); }
+
+.flag-icon-si.flag-icon-squared {
+background-image: url(../../img/flags/1x1/si.svg); }
+
+.flag-icon-sj {
+background-image: url(../../img/flags/4x3/sj.svg); }
+
+.flag-icon-sj.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sj.svg); }
+
+.flag-icon-sk {
+background-image: url(../../img/flags/4x3/sk.svg); }
+
+.flag-icon-sk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sk.svg); }
+
+.flag-icon-sl {
+background-image: url(../../img/flags/4x3/sl.svg); }
+
+.flag-icon-sl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sl.svg); }
+
+.flag-icon-sm {
+background-image: url(../../img/flags/4x3/sm.svg); }
+
+.flag-icon-sm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sm.svg); }
+
+.flag-icon-sn {
+background-image: url(../../img/flags/4x3/sn.svg); }
+
+.flag-icon-sn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sn.svg); }
+
+.flag-icon-so {
+background-image: url(../../img/flags/4x3/so.svg); }
+
+.flag-icon-so.flag-icon-squared {
+background-image: url(../../img/flags/1x1/so.svg); }
+
+.flag-icon-sr {
+background-image: url(../../img/flags/4x3/sr.svg); }
+
+.flag-icon-sr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sr.svg); }
+
+.flag-icon-ss {
+background-image: url(../../img/flags/4x3/ss.svg); }
+
+.flag-icon-ss.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ss.svg); }
+
+.flag-icon-st {
+background-image: url(../../img/flags/4x3/st.svg); }
+
+.flag-icon-st.flag-icon-squared {
+background-image: url(../../img/flags/1x1/st.svg); }
+
+.flag-icon-sv {
+background-image: url(../../img/flags/4x3/sv.svg); }
+
+.flag-icon-sv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sv.svg); }
+
+.flag-icon-sx {
+background-image: url(../../img/flags/4x3/sx.svg); }
+
+.flag-icon-sx.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sx.svg); }
+
+.flag-icon-sy {
+background-image: url(../../img/flags/4x3/sy.svg); }
+
+.flag-icon-sy.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sy.svg); }
+
+.flag-icon-sz {
+background-image: url(../../img/flags/4x3/sz.svg); }
+
+.flag-icon-sz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/sz.svg); }
+
+.flag-icon-tc {
+background-image: url(../../img/flags/4x3/tc.svg); }
+
+.flag-icon-tc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tc.svg); }
+
+.flag-icon-td {
+background-image: url(../../img/flags/4x3/td.svg); }
+
+.flag-icon-td.flag-icon-squared {
+background-image: url(../../img/flags/1x1/td.svg); }
+
+.flag-icon-tf {
+background-image: url(../../img/flags/4x3/tf.svg); }
+
+.flag-icon-tf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tf.svg); }
+
+.flag-icon-tg {
+background-image: url(../../img/flags/4x3/tg.svg); }
+
+.flag-icon-tg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tg.svg); }
+
+.flag-icon-th {
+background-image: url(../../img/flags/4x3/th.svg); }
+
+.flag-icon-th.flag-icon-squared {
+background-image: url(../../img/flags/1x1/th.svg); }
+
+.flag-icon-tj {
+background-image: url(../../img/flags/4x3/tj.svg); }
+
+.flag-icon-tj.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tj.svg); }
+
+.flag-icon-tk {
+background-image: url(../../img/flags/4x3/tk.svg); }
+
+.flag-icon-tk.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tk.svg); }
+
+.flag-icon-tl {
+background-image: url(../../img/flags/4x3/tl.svg); }
+
+.flag-icon-tl.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tl.svg); }
+
+.flag-icon-tm {
+background-image: url(../../img/flags/4x3/tm.svg); }
+
+.flag-icon-tm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tm.svg); }
+
+.flag-icon-tn {
+background-image: url(../../img/flags/4x3/tn.svg); }
+
+.flag-icon-tn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tn.svg); }
+
+.flag-icon-to {
+background-image: url(../../img/flags/4x3/to.svg); }
+
+.flag-icon-to.flag-icon-squared {
+background-image: url(../../img/flags/1x1/to.svg); }
+
+.flag-icon-tr {
+background-image: url(../../img/flags/4x3/tr.svg); }
+
+.flag-icon-tr.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tr.svg); }
+
+.flag-icon-tt {
+background-image: url(../../img/flags/4x3/tt.svg); }
+
+.flag-icon-tt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tt.svg); }
+
+.flag-icon-tv {
+background-image: url(../../img/flags/4x3/tv.svg); }
+
+.flag-icon-tv.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tv.svg); }
+
+.flag-icon-tw {
+background-image: url(../../img/flags/4x3/tw.svg); }
+
+.flag-icon-tw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tw.svg); }
+
+.flag-icon-tz {
+background-image: url(../../img/flags/4x3/tz.svg); }
+
+.flag-icon-tz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/tz.svg); }
+
+.flag-icon-ua {
+background-image: url(../../img/flags/4x3/ua.svg); }
+
+.flag-icon-ua.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ua.svg); }
+
+.flag-icon-ug {
+background-image: url(../../img/flags/4x3/ug.svg); }
+
+.flag-icon-ug.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ug.svg); }
+
+.flag-icon-um {
+background-image: url(../../img/flags/4x3/um.svg); }
+
+.flag-icon-um.flag-icon-squared {
+background-image: url(../../img/flags/1x1/um.svg); }
+
+.flag-icon-us {
+background-image: url(../../img/flags/4x3/us.svg); }
+
+.flag-icon-us.flag-icon-squared {
+background-image: url(../../img/flags/1x1/us.svg); }
+
+.flag-icon-uy {
+background-image: url(../../img/flags/4x3/uy.svg); }
+
+.flag-icon-uy.flag-icon-squared {
+background-image: url(../../img/flags/1x1/uy.svg); }
+
+.flag-icon-uz {
+background-image: url(../../img/flags/4x3/uz.svg); }
+
+.flag-icon-uz.flag-icon-squared {
+background-image: url(../../img/flags/1x1/uz.svg); }
+
+.flag-icon-va {
+background-image: url(../../img/flags/4x3/va.svg); }
+
+.flag-icon-va.flag-icon-squared {
+background-image: url(../../img/flags/1x1/va.svg); }
+
+.flag-icon-vc {
+background-image: url(../../img/flags/4x3/vc.svg); }
+
+.flag-icon-vc.flag-icon-squared {
+background-image: url(../../img/flags/1x1/vc.svg); }
+
+.flag-icon-ve {
+background-image: url(../../img/flags/4x3/ve.svg); }
+
+.flag-icon-ve.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ve.svg); }
+
+.flag-icon-vg {
+background-image: url(../../img/flags/4x3/vg.svg); }
+
+.flag-icon-vg.flag-icon-squared {
+background-image: url(../../img/flags/1x1/vg.svg); }
+
+.flag-icon-vi {
+background-image: url(../../img/flags/4x3/vi.svg); }
+
+.flag-icon-vi.flag-icon-squared {
+background-image: url(../../img/flags/1x1/vi.svg); }
+
+.flag-icon-vn {
+background-image: url(../../img/flags/4x3/vn.svg); }
+
+.flag-icon-vn.flag-icon-squared {
+background-image: url(../../img/flags/1x1/vn.svg); }
+
+.flag-icon-vu {
+background-image: url(../../img/flags/4x3/vu.svg); }
+
+.flag-icon-vu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/vu.svg); }
+
+.flag-icon-wf {
+background-image: url(../../img/flags/4x3/wf.svg); }
+
+.flag-icon-wf.flag-icon-squared {
+background-image: url(../../img/flags/1x1/wf.svg); }
+
+.flag-icon-ws {
+background-image: url(../../img/flags/4x3/ws.svg); }
+
+.flag-icon-ws.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ws.svg); }
+
+.flag-icon-ye {
+background-image: url(../../img/flags/4x3/ye.svg); }
+
+.flag-icon-ye.flag-icon-squared {
+background-image: url(../../img/flags/1x1/ye.svg); }
+
+.flag-icon-yt {
+background-image: url(../../img/flags/4x3/yt.svg); }
+
+.flag-icon-yt.flag-icon-squared {
+background-image: url(../../img/flags/1x1/yt.svg); }
+
+.flag-icon-za {
+background-image: url(../../img/flags/4x3/za.svg); }
+
+.flag-icon-za.flag-icon-squared {
+background-image: url(../../img/flags/1x1/za.svg); }
+
+.flag-icon-zm {
+background-image: url(../../img/flags/4x3/zm.svg); }
+
+.flag-icon-zm.flag-icon-squared {
+background-image: url(../../img/flags/1x1/zm.svg); }
+
+.flag-icon-zw {
+background-image: url(../../img/flags/4x3/zw.svg); }
+
+.flag-icon-zw.flag-icon-squared {
+background-image: url(../../img/flags/1x1/zw.svg); }
+
+.flag-icon-es-ct {
+background-image: url(../../img/flags/4x3/es-ct.svg); }
+
+.flag-icon-es-ct.flag-icon-squared {
+background-image: url(../../img/flags/1x1/es-ct.svg); }
+
+.flag-icon-eu {
+background-image: url(../../img/flags/4x3/eu.svg); }
+
+.flag-icon-eu.flag-icon-squared {
+background-image: url(../../img/flags/1x1/eu.svg); }
+
+.flag-icon-gb-eng {
+background-image: url(../../img/flags/4x3/gb-eng.svg); }
+
+.flag-icon-gb-eng.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gb-eng.svg); }
+
+.flag-icon-gb-nir {
+background-image: url(../../img/flags/4x3/gb-nir.svg); }
+
+.flag-icon-gb-nir.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gb-nir.svg); }
+
+.flag-icon-gb-sct {
+background-image: url(../../img/flags/4x3/gb-sct.svg); }
+
+.flag-icon-gb-sct.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gb-sct.svg); }
+
+.flag-icon-gb-wls {
+background-image: url(../../img/flags/4x3/gb-wls.svg); }
+
+.flag-icon-gb-wls.flag-icon-squared {
+background-image: url(../../img/flags/1x1/gb-wls.svg); }
+
+.flag-icon-un {
+background-image: url(../../img/flags/4x3/un.svg); }
+
+.flag-icon-un.flag-icon-squared {
+background-image: url(../../img/flags/1x1/un.svg); }
+
+                                                                                                                                                                                                                                                                /*# sourceMappingURL=flags.css.map */
